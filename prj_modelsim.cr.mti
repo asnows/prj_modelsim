@@ -1,0 +1,72 @@
+E:/WorkSpace/project/FPGA/prj_modelsim/src/TM1640/TM1640_driver.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/TM1640/TM1640_driver.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module TM1640_driver
+
+Top level modules:
+	TM1640_driver
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/eth_frame.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/eth_frame.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module eth_frame
+
+Top level modules:
+	eth_frame
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/TM1640/TM1640_cfg.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/TM1640/TM1640_cfg.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module TM1640_cfg
+
+Top level modules:
+	TM1640_cfg
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/mdio_cfg.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/mdio_cfg.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module mdio_cfg
+
+Top level modules:
+	mdio_cfg
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/mdio_opr.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/mdio_opr.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module mdio_opr
+
+Top level modules:
+	mdio_opr
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/checksum.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/checksum.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module checksum
+
+Top level modules:
+	checksum
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/top_tb.v {2 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/top_tb.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module top_tb
+** Warning: E:/WorkSpace/project/FPGA/prj_modelsim/src/top_tb.v(268): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	top_tb
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/MAC_Packet.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/MDIO/MAC_Packet.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module MAC_Packet
+
+Top level modules:
+	MAC_Packet
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/IIC/iic_opr.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/IIC/iic_opr.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module iic_opr
+
+Top level modules:
+	iic_opr
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/src/glbl.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/src/glbl.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module glbl
+
+Top level modules:
+	glbl
+
+} {} {}}

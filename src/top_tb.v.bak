@@ -1,0 +1,180 @@
+`timescale 1ns / 1ps
+
+module top_tb
+(
+);
+
+    reg clk_200m,clk_50m;
+    wire clk;
+	wire tready;
+    reg resetn = 1'b0;
+    
+    reg[7:0] data_test = 8'd0;
+    reg tvalid = 1'b0;
+    reg[7:0] tdata = 8'ha7;
+	reg[7:0] tdata2 = 8'd0;
+    
+    
+    always 
+    begin
+        #2.5 clk_200m = 0;
+        #2.5 clk_200m = 1;
+    end
+
+    always 
+    begin
+        #5 clk_50m = 0;
+        #5 clk_50m = 1;
+    end
+
+
+    
+    
+    initial
+    begin
+
+	 #0 tvalid = 1'b0;	
+     #100 resetn = 1;
+	 #100 tdata2 <=8'd3;
+	 
+	 #300 tdata2 <=8'd4;
+	 
+	
+    end
+
+	always@(posedge clk)
+	begin
+		if(tvalid & tready)
+		begin
+			tdata <= tdata + 1'b1;
+		end
+		
+
+	end
+	  
+	
+
+	
+	
+
+	assign clk = clk_50m;
+	
+	always@(posedge clk)
+	begin
+		if(resetn == 1'b1)
+		begin
+			tvalid <= 1'b1;
+		end
+		
+	end
+	
+
+
+	iic_opr iic_opr_I
+	(
+		.clk      	(clk),
+		.sendBytes	(8'd1),
+		.tvalid		(tvalid),
+		.tdata		(tdata),
+		.tready(tready),
+		.SCL   (),
+		.SDA   () 
+	);
+
+
+reg[7:0] tmm1640_tdata = 8'd0;
+
+
+always@(posedge clk)
+begin
+	if(tvalid == 1'b1)
+	begin
+		if(tmm1640_tdata < 255)
+		begin
+			tmm1640_tdata <= tmm1640_tdata + 1'b1;
+		end
+		
+	end
+	
+	
+end
+
+
+TM1640_driver TM1640_drive_i
+(
+	.clk(clk),
+	.tvalid(tvalid),
+	.sendBytes(8'd5),
+	.cmd1(8'h40),
+	.cmd2(8'hc0),
+	.tdata(tmm1640_tdata),
+	.cmd3(8'h8a),
+	.done(),
+	.SCL(),
+	.SDA()
+
+);
+
+
+
+
+
+TM1640_cfg TM1640_1_cfg
+(
+.clk(clk),
+.dispData(tdata2),
+.SCL(),
+.SDA()
+
+
+);
+
+wire mdo;
+// mdio_opr mdio_opr_I
+// (
+	// .clk(clk),
+	// .tvalid(tvalid),
+	// .op_code(2'b10),
+	// .phy_addr(5'b00011),
+	// .reg_addr(5'b00101),
+	// .senddata(16'haaaa),
+	// .recvdata(),
+	// .mdc(),
+	// .mdio(mdo),
+	// .done()
+	
+// );
+
+mdio_cfg mdio_cfg_I
+(
+    .clk(clk),
+    .resetn(resetn),
+    .mdc(),
+    .mdio()
+
+);
+
+
+eth_frame eth_frame_I
+(
+	.clk(clk),
+	.mdio_done(resetn),
+	.txen(),
+	.txd()
+
+);
+
+// MAC_Packet MAC_Packet_I
+// (
+    // .RSTn(resetn),
+    // .clk(clk),
+    // .TX_EN(),
+    // .MAC_TX_EN(resetn),
+    // .MAC_Data()
+// );
+
+
+
+
+
+endmodule
