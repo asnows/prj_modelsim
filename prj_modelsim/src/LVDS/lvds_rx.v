@@ -10,11 +10,11 @@ module lvds_rx
 (
 	input clk			,
 	input clkdiv		,
-	input reset 		,
-	input[DATA_WIDTH - 1 :0] pattern,
-	input bit_align_en	,
-	input bitslip_en	,
-	input idelayCtrl_rdy,
+	(*mark_debug="true"*)input reset 		,
+	(*mark_debug="true"*)input[DATA_WIDTH - 1 :0] pattern,
+	(*mark_debug="true"*)input bit_align_en	,
+	(*mark_debug="true"*)input bitslip_en	,
+	(*mark_debug="true"*)input idelayCtrl_rdy,
 	input datain_p		,
 	input datain_n		,
 	output[DATA_WIDTH - 1 :0] tdata,
@@ -29,18 +29,18 @@ module lvds_rx
 
 	wire idelay_m_tdata;
 	wire idelay_s_tdata ;
-	wire[4:0] tap_value ;
-	reg[4:0] master_tapValue ;
-	reg[4:0] slave_tapValue ;
+	(*mark_debug="true"*)wire[4:0] tap_value ;
+	(*mark_debug="true"*)reg[4:0] master_tapValue ;
+	(*mark_debug="true"*)reg[4:0] slave_tapValue ;
 	
-	wire[DATA_WIDTH - 1 :0] iser_m_tdata;
-	wire[DATA_WIDTH - 1 :0] iser_s_tdata;
+	(*mark_debug="true"*)wire[DATA_WIDTH - 1 :0] iser_m_tdata;
+	(*mark_debug="true"*)wire[DATA_WIDTH - 1 :0] iser_s_tdata;
 	(*mark_debug="true"*)wire iser_m_Comb;
 	(*mark_debug="true"*)wire iser_s_Comb;
-	wire bitslip;	
+	(*mark_debug="true"*)wire bitslip;	
 	wire ibufds_out_p;
 	wire ibufds_out_n;
-	wire align_done ;
+	(*mark_debug="true"*)wire align_done ;
 
 	assign tdata = iser_m_tdata;
 

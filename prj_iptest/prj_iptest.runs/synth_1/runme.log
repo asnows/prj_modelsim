@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4852 
+INFO: Helper process launched with PID 17976 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.020 ; gain = 96.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.047 ; gain = 96.762
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_iptest/prj_iptest.srcs/sources_1/new/top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'lvds' [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v:15]
@@ -32,7 +32,7 @@ WARNING: [Synth 8-3331] design top has unconnected port datain_n[3]
 WARNING: [Synth 8-3331] design top has unconnected port datain_n[2]
 WARNING: [Synth 8-3331] design top has unconnected port datain_n[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.391 ; gain = 151.102
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.625 ; gain = 151.340
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -45,10 +45,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.391 ; gain = 151.102
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.625 ; gain = 151.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.391 ; gain = 151.102
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.625 ; gain = 151.340
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -64,25 +64,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 769.930 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 770.133 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 769.930 ; gain = 449.641
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 770.133 ; gain = 449.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 769.930 ; gain = 449.641
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 770.133 ; gain = 449.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 769.930 ; gain = 449.641
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 770.133 ; gain = 449.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 769.930 ; gain = 449.641
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 770.133 ; gain = 449.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -131,7 +131,7 @@ WARNING: [Synth 8-3331] design top has unconnected port datain_n[3]
 WARNING: [Synth 8-3331] design top has unconnected port datain_n[2]
 WARNING: [Synth 8-3331] design top has unconnected port datain_n[1]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 769.930 ; gain = 449.641
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 770.133 ; gain = 449.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -143,13 +143,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 831.188 ; gain = 510.898
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 829.691 ; gain = 509.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 831.188 ; gain = 510.898
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 829.691 ; gain = 509.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -161,7 +161,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 840.715 ; gain = 520.426
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 839.723 ; gain = 519.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -193,7 +193,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module lvds_i has unconnected pin patt
 CRITICAL WARNING: [Synth 8-4442] BlackBox module lvds_i has unconnected pin pattern[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module lvds_i has unconnected pin pattern[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 840.715 ; gain = 520.426
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 839.723 ; gain = 519.438
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -206,7 +206,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 840.715 ; gain = 520.426
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 839.723 ; gain = 519.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,7 +218,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 840.715 ; gain = 520.426
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 839.723 ; gain = 519.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -248,30 +248,49 @@ Report Instance Areas:
 |1     |top      |       |    17|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 840.715 ; gain = 520.426
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 839.723 ; gain = 519.438
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 8 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 840.715 ; gain = 221.887
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 840.715 ; gain = 520.426
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 839.723 ; gain = 220.930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 839.723 ; gain = 519.438
 INFO: [Project 1-571] Translating synthesized netlist
 Parsing EDIF File [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf]
 Finished Parsing EDIF File [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf]
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'lvds_i/dataout_p[0]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:1728]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/bit_align_en' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2622]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/bitslip_en' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2629]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'lvds_i/dataout_p[0]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2667]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[0]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2714]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[1]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2721]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[2]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2728]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[3]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2735]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[4]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2742]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[5]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2749]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[6]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2756]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/pattern[7]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2763]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[0]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2803]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[1]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2810]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[2]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2817]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[3]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2824]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[4]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2831]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[5]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2838]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[6]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2845]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data[7]' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2852]
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'lvds_i/rx_data_clk' is not directly connected to top level port. Synthesis is ignored for E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf but preserved for implementation. [E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.edf:2862]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-16 Infos, 17 Warnings, 8 Critical Warnings and 0 Errors encountered.
+16 Infos, 36 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 862.539 ; gain = 555.074
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 862.285 ; gain = 554.824
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_iptest/prj_iptest.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 862.871 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 14:27:59 2019...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.036 . Memory (MB): peak = 862.285 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 15:54:16 2019...

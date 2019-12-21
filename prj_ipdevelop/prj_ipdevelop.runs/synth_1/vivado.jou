@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Dec 20 14:14:04 2019
-# Process ID: 4664
+# Start of session at: Fri Dec 20 15:50:08 2019
+# Process ID: 9472
 # Current directory: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1
 # Command line: vivado.exe -log lvds.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lvds.tcl
 # Log file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/lvds.vds

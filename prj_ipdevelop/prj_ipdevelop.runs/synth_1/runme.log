@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11084 
+INFO: Helper process launched with PID 18096 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 416.711 ; gain = 96.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.395 ; gain = 97.637
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'lvds' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v:4]
 	Parameter GROUP bound to: group_0 - type: string 
@@ -33,8 +33,20 @@ INFO: [Synth 8-6157] synthesizing module 'lvds_rx' [E:/WorkSpace/project/FPGA/pr
 	Parameter IDELAY_OFFSET bound to: 2 - type: integer 
 	Parameter DATA_RATE bound to: DDR - type: string 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:13]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:14]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:15]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:16]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:17]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:32]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:33]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:34]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:36]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:37]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:38]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:39]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:40]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:43]
 INFO: [Synth 8-6157] synthesizing module 'IBUFDS_DIFF_OUT' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19541]
 	Parameter DIFF_TERM bound to: FALSE - type: string 
 	Parameter DQS_BIAS bound to: FALSE - type: string 
@@ -103,8 +115,12 @@ INFO: [Synth 8-6157] synthesizing module 'lvds_bitslip' [E:/WorkSpace/project/FP
 	Parameter STATE_COMPELET bound to: 2'b11 
 WARNING: [Synth 8-6014] Unused sequential element data_in_dly_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v:36]
 INFO: [Synth 8-6155] done synthesizing module 'lvds_bitslip' (6#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v:1]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_iserdese_master'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:101]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bit_alignment_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:170]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_iserdese_slave'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:151]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'IDELAYE2_slave'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:128]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_iserdese_master'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:101]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'IDELAYE2_master'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:77]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_bitslip_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:187]
 INFO: [Synth 8-6155] done synthesizing module 'lvds_rx' (7#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:1]
 INFO: [Synth 8-6157] synthesizing module 'lvds_tx' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_tx.v:1]
 	Parameter DATA_RATE bound to: DDR - type: string 
@@ -190,7 +206,7 @@ INFO: [Synth 8-6155] done synthesizing module 'lvds' (15#1) [E:/WorkSpace/projec
 WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_p
 WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_n
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.152 ; gain = 151.344
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.313 ; gain = 151.555
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -203,10 +219,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.152 ; gain = 151.344
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.313 ; gain = 151.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.152 ; gain = 151.344
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.313 ; gain = 151.555
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -256,22 +272,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 2 instances
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 832.898 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 832.352 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.898 ; gain = 513.090
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.898 ; gain = 513.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.898 ; gain = 513.090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bit_alignment'
 INFO: [Synth 8-5544] ROM "align_done_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -300,7 +316,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lvds_bitslip'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.898 ; gain = 513.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -385,12 +401,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-6014] Unused sequential element LVDS_RX[0].lvds_rx_i/lvds_bitslip_i/bitslip_done_reg_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v:32]
 WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_p
 WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_n
-INFO: [Synth 8-3886] merging instance 'LVDS_RX[0].lvds_rx_i/slave_tapValue_reg[0]' (FD) to 'LVDS_RX[0].lvds_rx_i/master_tapValue_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 832.898 ; gain = 513.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 832.352 ; gain = 512.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -402,13 +416,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 837.656 ; gain = 517.848
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 837.285 ; gain = 517.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 837.730 ; gain = 517.922
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 837.359 ; gain = 517.602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -420,7 +434,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 857.387 ; gain = 537.578
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 856.418 ; gain = 536.660
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -444,7 +458,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 857.387 ; gain = 537.578
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -457,7 +471,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 857.387 ; gain = 537.578
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -469,7 +483,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 857.387 ; gain = 537.578
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -490,32 +504,35 @@ Report Cell Usage:
 |3     |IDELAYCTRL      |     1|
 |4     |IDELAYE2        |     2|
 |5     |ISERDESE2       |     2|
-|6     |LUT1            |     7|
-|7     |LUT2            |     9|
-|8     |LUT3            |     5|
-|9     |LUT4            |    12|
+|6     |LUT1            |     8|
+|7     |LUT2            |    16|
+|8     |LUT3            |     4|
+|9     |LUT4            |    14|
 |10    |LUT5            |     7|
-|11    |LUT6            |    10|
+|11    |LUT6            |     8|
 |12    |MMCME2_BASE     |     1|
 |13    |OSERDESE2       |     1|
-|14    |FDRE            |    44|
+|14    |FDRE            |    46|
 |15    |IBUFDS_DIFF_OUT |     2|
 +------+----------------+------+
 
 Report Instance Areas: 
-+------+----------------------------------------------+-----------------+------+
-|      |Instance                                      |Module           |Cells |
-+------+----------------------------------------------+-----------------+------+
-|1     |top                                           |                 |   108|
-|2     |  \LVDS_RX[0].lvds_rx_i/lvds_iserdese_master  |lvds_iserdese__1 |     2|
-|3     |  \LVDS_RX[0].lvds_rx_i/lvds_iserdese_slave   |lvds_iserdese    |     2|
-+------+----------------------------------------------+-----------------+------+
++------+-------------------------+-----------------+------+
+|      |Instance                 |Module           |Cells |
++------+-------------------------+-----------------+------+
+|1     |top                      |                 |   117|
+|2     |  \LVDS_RX[0].lvds_rx_i  |lvds_rx          |   108|
+|3     |    lvds_iserdese_master |lvds_iserdese__1 |     2|
+|4     |    lvds_iserdese_slave  |lvds_iserdese    |     2|
+|5     |    bit_alignment_i      |bit_alignment    |    67|
+|6     |    lvds_bitslip_i       |lvds_bitslip     |    20|
++------+-------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 857.387 ; gain = 537.578
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 857.387 ; gain = 175.832
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 857.387 ; gain = 537.578
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 856.418 ; gain = 175.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -527,11 +544,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MMCME2_BASE => MMCME2_ADV: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 20 Warnings, 10 Critical Warnings and 0 Errors encountered.
+75 Infos, 19 Warnings, 10 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 863.191 ; gain = 556.203
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 862.238 ; gain = 555.488
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/lvds.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file lvds_utilization_synth.rpt -pb lvds_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 863.191 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 14:14:39 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 862.238 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 15:50:44 2019...

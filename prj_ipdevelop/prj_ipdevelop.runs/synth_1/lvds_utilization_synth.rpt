@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Dec 20 14:14:39 2019
+| Date         : Fri Dec 20 15:50:43 2019
 | Host         : VT2OB6D7ZB52FZ0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file lvds_utilization_synth.rpt -pb lvds_utilization_synth.pb
 | Design       : lvds
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   41 |     0 |     53200 |  0.08 |
-|   LUT as Logic          |   41 |     0 |     53200 |  0.08 |
+| Slice LUTs*             |   48 |     0 |     53200 |  0.09 |
+|   LUT as Logic          |   48 |     0 |     53200 |  0.09 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   44 |     0 |    106400 |  0.04 |
-|   Register as Flip Flop |   44 |     0 |    106400 |  0.04 |
+| Slice Registers         |   46 |     0 |    106400 |  0.04 |
+|   Register as Flip Flop |   46 |     0 |    106400 |  0.04 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 44    |          Yes |       Reset |            - |
+| 46    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,13 +149,13 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |   44 |        Flop & Latch |
-| LUT4       |   12 |                 LUT |
-| LUT6       |   10 |                 LUT |
-| LUT2       |    9 |                 LUT |
+| FDRE       |   46 |        Flop & Latch |
+| LUT2       |   16 |                 LUT |
+| LUT4       |   14 |                 LUT |
+| LUT6       |    8 |                 LUT |
 | LUT5       |    7 |                 LUT |
-| LUT3       |    5 |                 LUT |
-| LUT1       |    5 |                 LUT |
+| LUT1       |    6 |                 LUT |
+| LUT3       |    4 |                 LUT |
 | IBUFDS     |    4 |                  IO |
 | BUFG       |    3 |               Clock |
 | ISERDESE2  |    2 |                  IO |

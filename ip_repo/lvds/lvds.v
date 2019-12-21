@@ -1,9 +1,9 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Fri Dec 20 14:18:10 2019
+// Date        : Fri Dec 20 15:52:37 2019
 // Host        : VT2OB6D7ZB52FZ0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -mode synth_stub E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v -force
+// Command     : write_verilog -mode synth_stub e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v -force
 // Design      : lvds
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
