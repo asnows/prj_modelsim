@@ -30,34 +30,31 @@ input 		rx_en
 
 )
 
+// eth_send
+// #(
+	// .MEDIA_TYPES (MEDIA_TYPES)
+// )
+// eth_send_I
+// (
+// .sys_clk	(sys_clk	)	,
+// .dst_mac	(dst_mac	)	,
+// .src_mac	(src_mac	)	,
+// .eth_type	(eth_type	)	,
 
-wire tx_dclk;
+// input 	    s_axis_aclk		,
+// input[7:0]  s_axis_tdata    ,
+// input       s_axis_tlast    ,
+// output      s_axis_tready   ,
+// input       s_axis_tuser    ,
+// input       s_axis_tvalid   ,
 
 
-assign tx_data_clk = tx_dclk;
 
-eth_gen_txc gen_txc_I
-#(
-.MEDIA_TYPES (MEDIA_TYPES)
-
-)
-gen_txc_I
-(
-.sys_clk(sys_clk),
-.tx_dclk(tx_dclk),//generate data clk
-.tx_clk (tx_clk)//trans data clk
-
-)
-
-
-module eth_tx
-(
-	input clk(tx_dclk),
-	input tvalid,
-	input[7:0]  tdata,
-	output 		tx_en,
-	output[3:0] txd
-)
+// .tx_data_clk	(tx_data_clk	)	,//generate data clk
+// .tx_clk 		(tx_clk 		)	, //trans data clk
+// .txd			(txd			)	,
+// .tx_en			(tx_en			)	,
+// )
 
 
 
