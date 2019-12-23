@@ -1,1 +1,72 @@
+E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v {2 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module top_tb
+** Warning: E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v(268): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
+Top level modules:
+	top_tb
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds
+
+Top level modules:
+	lvds
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/glbl.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/glbl.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module glbl
+
+Top level modules:
+	glbl
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds_rx
+
+Top level modules:
+	lvds_rx
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_tx.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_tx.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds_tx
+
+Top level modules:
+	lvds_tx
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_iserdese.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_iserdese.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds_iserdese
+
+Top level modules:
+	lvds_iserdese
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_gen_rxclk.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_gen_rxclk.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds_gen_rxclk
+
+Top level modules:
+	lvds_gen_rxclk
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module bit_alignment
+
+Top level modules:
+	bit_alignment
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds_bitslip
+
+Top level modules:
+	lvds_bitslip
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module lvds_oserdese
+
+Top level modules:
+	lvds_oserdese
+
+} {} {}}
