@@ -4,7 +4,7 @@ module top_tb
 (
 );
 
-    reg clk_200m,clk_50m,clk_500m,clk_1000m,clk_100m;
+    reg clk_200m,clk_50m,clk_500m,clk_1000m,clk_100m,clk_125m;
 	reg clk_445_5m;
     wire clk;
 	wire tready;
@@ -45,6 +45,15 @@ module top_tb
 		#5 clk_100m = 0;
 		#5 clk_100m = 1;
 	end
+	
+	always
+	begin
+		#4 clk_125m = 0;
+		#4 clk_125m = 1;
+	end
+
+	
+	
 
 	always
 	begin
@@ -233,6 +242,27 @@ reg[7:0] counts = 8'd0;
 
 
 reg[9:0] random_data = 10'd0;
+
+wire[7:0]  m_tdata ;
+wire       m_tlast ;
+wire       m_tready;
+wire       m_tuser ;
+wire       m_tvalid;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 initial
 begin
 	#0 flg = 1'b0;
@@ -316,6 +346,64 @@ lvds_i
 );
 
 
+
+wire      tx_data_clk;
+
+axis_master
+#(
+	.DATA_NUM (1024)
+)
+axis_master_I
+(
+	.clk(tx_data_clk),
+	.reset(~resetn),
+	.m_axis_tdata   (m_tdata ) ,
+	.m_axis_tlast   (m_tlast ) ,
+	.m_axis_tready  (m_tready) ,
+	.m_axis_tuser   (m_tuser ) ,
+	.m_axis_tvalid  (m_tvalid) 
+
+);
+
+
+localparam DST_MAC = 48'h08_57_00_f4_ae_e5;
+localparam SRC_MAC = 48'h08_57_00_f4_ae_e6;
+localparam ETH_TYPE = 16'h0800;
+localparam IP_SrcAddr = 32'hc0_a8_c8_64;//192.168.200.100
+localparam IP_DestAddr = 32'hc0_a8_c8_65;//192.168.200.101
+localparam UDP_SrcPort = 16'd1536;//192.168.200.101
+localparam UDP_DestPort = 16'd1536;//192.168.200.101
+
+eth_mac
+#(
+	.MEDIA_TYPES ( "1000Base") //100Base
+)
+eth_mac_I
+(
+.sys_clk (clk_125m),
+.dst_mac(DST_MAC),
+.src_mac(SRC_MAC),
+.eth_type(ETH_TYPE),
+.IP_TotLen(16'd1032),   //Total Length
+.IP_SrcAddr(IP_SrcAddr),
+.IP_DestAddr(IP_DestAddr),
+.UDP_SrcPort(UDP_SrcPort),
+.UDP_DestPort(UDP_DestPort),
+.UDP_TotLen  (16'd1024),//Total Length
+
+
+.s_axis_aclk	 (tx_data_clk),
+.s_axis_tdata    (m_tdata ) ,
+.s_axis_tlast    (m_tlast ) ,
+.s_axis_tready   (m_tready) ,
+.s_axis_tuser    (m_tuser ) ,
+.s_axis_tvalid   (m_tvalid) ,
+
+.tx_data_clk(tx_data_clk),//generate data clk
+.tx_clk 	 ()  , //trans data clk
+.txd		 ()  ,
+.tx_en      ()
+);
 
 
 

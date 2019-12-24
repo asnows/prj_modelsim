@@ -4,11 +4,11 @@ parameter MEDIA_TYPES = "1000Base" //100Base
 
 )
 (
-input sys_clk,
+input sys_clk,//125m or 25m
 output tx_dclk,//generate data clk
 output tx_clk  //trans data clk
 
-)
+);
 
 reg[1:0] dclk_count = 2'd0;
 
