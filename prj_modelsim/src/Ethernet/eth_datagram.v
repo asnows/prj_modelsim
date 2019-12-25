@@ -19,7 +19,9 @@ output      m_axis_tvalid
 
 localparam STATE_IDEL = 3'd0,STATE_PREA = 3'd1,STATE_HEAD = 3'd2,STATE_DATA = 3'd3,STATE_CRC = 3'd4;
 reg[7:0] m_tdata_reg = 8'hff;
+reg[7:0] m_tdata_dly = 8'hff;
 reg m_tvalid_reg = 1'b0;
+reg m_tvalid_dly = 1'b0;
 
 
 reg[2:0] state = STATE_IDEL;
@@ -31,15 +33,24 @@ reg s_tuser_dly	;
 reg s_tvalid_dly;
 
 reg 	  	tready_reg =1'b1;
-wire [31:0] crc_data;
+reg			fcs_en = 1'b0;
+reg			fcs_reset = 1'b0;
+reg 		fcs_out = 1'b0;
+
+reg  [7:0]  fcs_data_reg;
+wire [31:0] fcs_data;
+
 
 
 
 
 
 assign s_axis_tready = tready_reg;
-assign m_axis_tdata = m_tdata_reg;
-assign m_axis_tvalid = m_tvalid_reg;
+assign m_axis_tdata  = (fcs_out == 1'b1)? fcs_data_reg : m_tdata_dly ;
+assign m_axis_tvalid = m_tvalid_dly;
+
+
+
 
 always@(posedge s_axis_aclk)
 begin
@@ -61,6 +72,12 @@ begin
 end
 
 
+always@(posedge s_axis_aclk)
+begin
+	m_tdata_dly  <= m_tdata_reg;
+	m_tvalid_dly <= m_tvalid_reg;
+end
+
 
 always@(posedge s_axis_aclk)
 begin
@@ -70,16 +87,20 @@ begin
 			counts <= 8'd0;
 			m_tdata_reg = 8'hff;
 			m_tvalid_reg <= 1'b0;
+			fcs_en <= 1'b0;
+			fcs_out <= 1'b0;
 		
 			if((~s_tuser_dly) & s_axis_tuser)
 			begin
 				state <= STATE_PREA;	
 				tready_reg <= 1'b0;
+				fcs_reset <= 1'b0;
 			end
 			else
 			begin
 				state <= STATE_IDEL;
 				tready_reg <= 1'b1;
+				fcs_reset <= 1'b1;
 			end
 			
 			
@@ -109,6 +130,7 @@ begin
 				8'd0:
 				begin
 					m_tdata_reg 	<= dst_mac[47:40];
+					fcs_en <= 1'b1;
 				end
 				8'd1:
 				begin
@@ -171,7 +193,7 @@ begin
 				8'd14:
 				begin
 					m_tdata_reg 	<= s_tdata_reg[16:8];
-					tready_reg 	<= 1'b1;
+					tready_reg 		<= 1'b1;
 				end
 				8'd15:
 				begin
@@ -189,6 +211,8 @@ begin
 			begin			
 				state <= STATE_CRC;	
 				tready_reg 	<= 1'b0;
+				
+				
 			end	
 					
 		end
@@ -200,20 +224,27 @@ begin
 			case(counts)
 				8'd0:
 				begin
-					m_tdata_reg 	<= crc_data[31:24];
-				end
+					fcs_en <= 1'b0;
+					
+				end			
 				8'd1:
 				begin
-					m_tdata_reg 	<= crc_data[23:16];
+					fcs_out <= 1'b1;
+					fcs_data_reg 	<= fcs_data[31:24];
 				end
 				8'd2:
 				begin
-					m_tdata_reg 	<= crc_data[15:8];
+					fcs_data_reg 	<= fcs_data[23:16];
 				end
 				8'd3:
 				begin
-					m_tdata_reg 	<= crc_data[7:0];
-					state 		<= STATE_IDEL;
+					fcs_data_reg 	<= fcs_data[15:8];
+				end
+				8'd4:
+				begin
+					fcs_data_reg 	<= fcs_data[7:0];
+					state 		    <= STATE_IDEL;
+					m_tvalid_reg    <= 1'b0;
 				end	
 			endcase
 		end
@@ -226,5 +257,19 @@ begin
 	endcase
 
 end
+
+
+
+
+ eth_fcs eth_fcs_I
+ (
+	 .Clk	(s_axis_aclk), 
+	 .Reset	(fcs_reset), 
+	 .Data_in(m_tdata_reg), 
+	 .Enable(fcs_en), 
+	 .Crc   (fcs_data),
+	 .CrcNext()
+ );
+ 
 
 endmodule
