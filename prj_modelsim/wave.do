@@ -56,19 +56,18 @@ add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I
 add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/s_axis_tready
 add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/s_axis_tuser
 add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/s_axis_tvalid
-add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_axis_tdata
-add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_axis_tvalid
+add wave -noupdate -group eth -color Red -itemcolor Red /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_axis_tdata
+add wave -noupdate -group eth -color Red -itemcolor Red /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_axis_tvalid
 add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/state
 add wave -noupdate -group eth -radix decimal /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/counts
 add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/s_tdata_reg
 add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/tready_reg
-add wave -noupdate -group eth /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/crc_data
-add wave -noupdate -expand -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/clk
-add wave -noupdate -expand -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/tvalid
-add wave -noupdate -expand -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/tdata
-add wave -noupdate -expand -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/tx_en
-add wave -noupdate -expand -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/txd
-add wave -noupdate -expand -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_tdata_reg
+add wave -noupdate -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/clk
+add wave -noupdate -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/tvalid
+add wave -noupdate -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/tdata
+add wave -noupdate -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/tx_en
+add wave -noupdate -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/mac_tx_I/txd
+add wave -noupdate -group mac_tx /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_tdata_reg
 add wave -noupdate /glbl/top_tb_i/eth_mac_I/eth_send_I/eth_datagram_I/m_tvalid_reg
 add wave -noupdate -group udp /glbl/top_tb_i/eth_mac_I/eth_send_I/udp_datagram_I/UDP_SrcPort
 add wave -noupdate -group udp /glbl/top_tb_i/eth_mac_I/eth_send_I/udp_datagram_I/UDP_DestPort
@@ -98,28 +97,66 @@ add wave -noupdate -group udp /glbl/top_tb_i/eth_mac_I/eth_send_I/udp_datagram_I
 add wave -noupdate -group udp /glbl/top_tb_i/eth_mac_I/eth_send_I/udp_datagram_I/m_tuser_reg
 add wave -noupdate -group udp /glbl/top_tb_i/eth_mac_I/eth_send_I/udp_datagram_I/m_tvalid_reg
 add wave -noupdate /glbl/top_tb_i/eth_mac_I/eth_send_I/udp_datagram_I/counts
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/sys_clk
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/dst_mac
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/src_mac
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/eth_type
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/IP_TotLen
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/IP_SrcAddr
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/IP_DestAddr
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/UDP_SrcPort
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/UDP_DestPort
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/UDP_TotLen
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_aclk
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tdata
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tlast
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tready
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tuser
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tvalid
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/tx_data_clk
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/tx_clk
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/txd
-add wave -noupdate -expand -group eth_mac /glbl/top_tb_i/eth_mac_I/tx_en
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/sys_clk
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/dst_mac
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/src_mac
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/eth_type
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/IP_TotLen
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/IP_SrcAddr
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/IP_DestAddr
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/UDP_SrcPort
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/UDP_DestPort
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/UDP_TotLen
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_aclk
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tdata
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tlast
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tready
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tuser
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/s_axis_tvalid
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/tx_data_clk
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/tx_clk
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/txd
+add wave -noupdate -group eth_mac /glbl/top_tb_i/eth_mac_I/tx_en
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_opcode
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_srcMac
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_srcIP
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_destMac
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_destIP
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_enable
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_axis_aclk
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_axis_tdata
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_axis_tlast
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_axis_tready
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_axis_tuser
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_axis_tvalid
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_axis_tdata
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_axis_tlast
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_axis_tready
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_axis_tuser
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_axis_tvalid
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/state
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/counts
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_hwtype_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_proto_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_hwlen_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_protolen_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_opcode_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_srcMac_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_srcIP_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_destMac_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/arp_destIP_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_tdata_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_tdata_reg
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_tlast_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_tuser_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_tvalid_dly
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/s_tready_reg
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_tdata_reg
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_tlast_reg
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_tuser_reg
+add wave -noupdate -group arp /glbl/top_tb_i/eth_mac_I/eth_send_I/arp_datagram_I/m_tvalid_reg
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {260000 ps} 0} {{Cursor 2} {256100 ps} 1}
+WaveRestoreCursors {{Cursor 1} {9319906 ps} 0} {{Cursor 2} {256100 ps} 1}
 quietly wave cursor active 1
 configure wave -namecolwidth 498
 configure wave -valuecolwidth 100
@@ -135,4 +172,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {194464 ps} {325536 ps}
+WaveRestoreZoom {9100847 ps} {9414255 ps}

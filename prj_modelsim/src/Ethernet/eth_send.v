@@ -34,6 +34,21 @@ output 		tx_en
 
 wire 		tx_dclk;
 
+reg [15:0] arp_opcode = 16'd2;
+reg [47:0] arp_srcMac ;
+reg [31:0] arp_srcIP  ;
+reg [47:0] arp_destMac;
+reg [31:0] arp_destIP ;
+	
+	
+
+wire[7:0]  s_udp_tdata   ;
+wire       s_udp_tlast   ;
+wire       s_udp_tready  ;
+wire       s_udp_tuser   ;
+wire       s_udp_tvalid  ;
+
+
 wire[7:0]  s_ip_tdata   ;
 wire       s_ip_tlast   ;
 wire       s_ip_tready  ;
@@ -56,9 +71,9 @@ wire       s_eth_tuser   ;
 wire       s_eth_tvalid  ;
 
 
-reg udp_enable = 1'b1;
-reg ip_enable = 1'b1;
-
+reg udp_enable = 1'b0;
+reg ip_enable = 1'b0;
+reg arp_enable = 1'b1;
 
 
 
@@ -78,6 +93,45 @@ gen_txc_I
 );
 
 
+
+always@(*)
+begin
+
+	arp_opcode  <= 16'd2;
+	arp_srcMac	<= src_mac;
+	arp_srcIP   <= IP_SrcAddr;
+	arp_destMac <= dst_mac;
+	arp_destIP  <= IP_DestAddr;
+
+end
+
+arp_datagram arp_datagram_I
+(
+
+	.arp_opcode (arp_opcode ) ,
+	.arp_srcMac	(arp_srcMac	) ,
+	.arp_srcIP  (arp_srcIP  ) ,
+	.arp_destMac(arp_destMac) ,
+	.arp_destIP (arp_destIP ) ,
+
+	.arp_enable		 (arp_enable   ),
+	.s_axis_aclk	 (s_axis_aclk  ),
+	.s_axis_tdata    (s_axis_tdata ),
+	.s_axis_tlast    (s_axis_tlast ),
+	.s_axis_tready   (s_axis_tready),
+	.s_axis_tuser    (s_axis_tuser ),
+	.s_axis_tvalid   (s_axis_tvalid),
+
+
+	.m_axis_tdata    (s_udp_tdata ),
+	.m_axis_tlast    (s_udp_tlast ),
+	.m_axis_tready   (s_udp_tready),
+	.m_axis_tuser    (s_udp_tuser ),
+	.m_axis_tvalid   (s_udp_tvalid)
+
+);
+
+
 udp_datagram udp_datagram_I
 (
 
@@ -87,11 +141,11 @@ udp_datagram udp_datagram_I
 	.UDP_CheckSum(UDP_CheckSum),
     .udp_enable		 (udp_enable  ),
 	.s_axis_aclk	 (s_axis_aclk  ),
-	.s_axis_tdata    (s_axis_tdata ),
-	.s_axis_tlast    (s_axis_tlast ),
-	.s_axis_tready   (s_axis_tready),
-	.s_axis_tuser    (s_axis_tuser ),
-	.s_axis_tvalid   (s_axis_tvalid),
+	.s_axis_tdata    (s_udp_tdata ),
+	.s_axis_tlast    (s_udp_tlast ),
+	.s_axis_tready   (s_udp_tready),
+	.s_axis_tuser    (s_udp_tuser ),
+	.s_axis_tvalid   (s_udp_tvalid),
 
 	.m_axis_tdata  (s_ip_tdata ),
 	.m_axis_tlast  (s_ip_tlast ),
