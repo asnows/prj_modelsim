@@ -5,14 +5,6 @@ Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 Top level modules:
 	tx_oper
 
-} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v {2 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v
-Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
--- Compiling module top_tb
-** Warning: E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v(298): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-
-Top level modules:
-	top_tb
-
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 -- Compiling module lvds
@@ -27,21 +19,19 @@ Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 Top level modules:
 	glbl
 
-} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_eth.v {2 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_eth.v
-Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
--- Compiling module tx_eth
-** Warning: E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_eth.v(185): (vlog-2697) MSB of part-select into 'eth_type' is out of bounds.
-** Warning: E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_eth.v(195): (vlog-2697) MSB of part-select into 's_tdata_reg' is out of bounds.
-
-Top level modules:
-	tx_eth
-
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 -- Compiling module lvds_rx
 
 Top level modules:
 	lvds_rx
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_clk_gen.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_clk_gen.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module tx_clk_gen
+
+Top level modules:
+	tx_clk_gen
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_arp.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_arp.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
@@ -94,6 +84,10 @@ Top level modules:
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_rx.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_rx.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module mac_rx
+
+Top level modules:
+	mac_rx
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/axis_master.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/axis_master.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
@@ -101,6 +95,13 @@ Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 
 Top level modules:
 	axis_master
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_tx.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_tx.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module mac_tx
+
+Top level modules:
+	mac_tx
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_udp.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_udp.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
@@ -125,6 +126,10 @@ Top level modules:
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_oper.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_oper.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module rx_oper
+
+Top level modules:
+	rx_oper
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019

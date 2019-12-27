@@ -374,6 +374,11 @@ localparam IP_DestAddr = 32'hc0_a8_c8_65;//192.168.200.101
 localparam UDP_SrcPort = 16'd1536;//192.168.200.101
 localparam UDP_DestPort = 16'd1536;//192.168.200.101
 
+wire 		tx_clk ;	
+wire[3:0]   txd	;	  
+wire 		tx_en;      
+
+
 mac
 #(
 	.MEDIA_TYPES ( "1000Base") //100Base
@@ -400,9 +405,14 @@ mac_I
 .s_axis_tvalid   (m_tvalid) ,
 
 .tx_data_clk(tx_data_clk),//generate data clk
-.tx_clk 	 ()  , //trans data clk
-.txd		 ()  ,
-.tx_en      ()
+.tx_clk 	 (tx_clk)  , //trans data clk
+.txd		 (txd)  ,
+.tx_en       (tx_en) ,
+
+.rx_clk (tx_clk) 	   , //trans data clk
+.rxd	(txd)	   ,
+.rx_en  (tx_en)     
+
 );
 
 

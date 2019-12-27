@@ -50,10 +50,10 @@ n@_opt3
 R4
 R0
 T_opt4
-!s110 1577417655
-Vb`4n3TnW;FR@=BkOFcSL^2
+!s110 1577426302
+V3BoDez0N;5z>EoDo>e<jE3
 R1
-=4-085700f4aee5-5e057bb7-14b-73c
+=7-085700f4aee5-5e059d7e-132-73c
 R2
 R3
 n@_opt4
@@ -81,7 +81,7 @@ r1
 Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
 vaxis_master
-Z11 !s110 1577417637
+Z11 !s110 1577426287
 !i10b 1
 !s100 O?HRC2Qb`S?LRSfLJKPkB3
 !s11b 2:hRj=]E`1dXmEkTZlJ_h2
@@ -96,14 +96,14 @@ R9
 r1
 !s85 0
 31
-Z12 !s108 1577417637.000000
+Z12 !s108 1577426287.000000
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/axis_master.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/axis_master.v|
 !i113 0
 R10
 R3
 vbit_alignment
-Z13 !s110 1577417636
+Z13 !s110 1577426285
 !i10b 1
 !s100 SGJSo[91P98?AQU=9OM0L1
 !s11b 6@3:iFVY4[CRFnzFOT15j0
@@ -118,7 +118,7 @@ R9
 r1
 !s85 0
 31
-Z14 !s108 1577417636.000000
+Z14 !s108 1577426285.000000
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v|
 !i113 0
@@ -191,7 +191,7 @@ Z22 !s108 1577410827.000000
 R10
 R3
 veth_fcs
-Z23 !s110 1577417638
+R11
 !i10b 1
 !s100 oJ:Zai>TedH;[[VZLkI@Z1
 R19
@@ -238,7 +238,7 @@ veth_gen_txc
 R20
 !i10b 1
 !s100 Ci=l69Mg43agKggQNGg8W3
-Z24 !s11b mDbD;mGb:KlR_Db3Qz<672
+Z23 !s11b mDbD;mGb:KlR_Db3Qz<672
 ID_^zmZ>Q=6YOJW2<PQSn`1
 R7
 R8
@@ -260,26 +260,26 @@ veth_mac
 !s110 1577417376
 !i10b 1
 !s100 mZWc17hXa6=66a1XZMjV42
-Z25 !s11b RQn?GU81TJOW;<EEA9BUI2
+!s11b RQn?GU81TJOW;<EEA9BUI2
 I7QR@zi7TMiB:5cIceX[NP0
 R7
 R8
 w1577417271
-Z26 8E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v
-Z27 FE:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v
+Z24 8E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v
+Z25 FE:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v
 L0 1
 R9
 r1
 !s85 0
 31
 !s108 1577417376.000000
-Z28 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v|
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v|
+Z26 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac.v|
 !i113 0
 R10
 R3
 veth_send
-Z30 !s110 1577410828
+Z28 !s110 1577410828
 !i10b 1
 !s100 [lRJn@_g4z^dgAGGCI`7@2
 !s11b <9;gWk82LlIM]W4QUK7<m1
@@ -294,14 +294,14 @@ R9
 r1
 !s85 0
 31
-Z31 !s108 1577410828.000000
+Z29 !s108 1577410828.000000
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/eth_send.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/eth_send.v|
 !i113 0
 R10
 R3
 vglbl
-!s110 1577417635
+R13
 !i10b 1
 !s100 YT=VK=SZSe0:l@G9JBMjF3
 !s11b YQOzO7oo>lcF<9P^e=lBG1
@@ -316,7 +316,7 @@ R9
 r1
 !s85 0
 31
-Z32 !s108 1577417635.000000
+R14
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/glbl.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/glbl.v|
 !i113 0
@@ -345,10 +345,10 @@ r1
 R10
 R3
 vip_datagram
-R30
+R28
 !i10b 1
 !s100 8]l3Oz]BXne7Sm`OV^mFb3
-Z33 !s11b PO?`c:7<Rhm_ZK6jmQVXQ3
+Z30 !s11b PO?`c:7<Rhm_ZK6jmQVXQ3
 IGjP2Fm>H?7IQ;HA`nZh5A3
 R7
 R8
@@ -360,14 +360,14 @@ R9
 r1
 !s85 0
 31
-R31
+R29
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/ip_datagram.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/ip_datagram.v|
 !i113 0
 R10
 R3
 vlvds
-R13
+Z31 !s110 1577426286
 !i10b 1
 !s100 g^fU^8JbBU<67KD_?7?=10
 !s11b =@Y]SDV^Ka^96HnTEPV762
@@ -389,7 +389,7 @@ R14
 R10
 R3
 vlvds_bitslip
-R13
+R31
 !i10b 1
 !s100 5:zIz96;NSW^FfX0Ma^No1
 !s11b 4E4=chdJg_6:6LM4GhQ5B1
@@ -404,14 +404,14 @@ R9
 r1
 !s85 0
 31
-R14
+Z32 !s108 1577426286.000000
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v|
 !i113 0
 R10
 R3
 vlvds_gen_rxclk
-R13
+R31
 !i10b 1
 !s100 5Rg9lA8Z4Wf[AM;N7i^R<1
 !s11b ^TcPlQNDMldYTzd4[FP[10
@@ -426,14 +426,14 @@ R9
 r1
 !s85 0
 31
-R14
+R32
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_gen_rxclk.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_gen_rxclk.v|
 !i113 0
 R10
 R3
 vlvds_iserdese
-R11
+R31
 !i10b 1
 !s100 H=^;YZZMk25UGblG9J:H81
 !s11b 0^ZOR4UCKYC:?@`:HEgGR3
@@ -448,14 +448,14 @@ R9
 r1
 !s85 0
 31
-R14
+R32
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_iserdese.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_iserdese.v|
 !i113 0
 R10
 R3
 vlvds_oserdese
-R11
+R31
 !i10b 1
 !s100 ]QkLS3J0_bSz=hdmTgI:20
 !s11b nnOA0XKILF?3=VKk7zjeg3
@@ -470,7 +470,7 @@ R9
 r1
 !s85 0
 31
-R12
+R32
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v|
 !i113 0
@@ -521,24 +521,24 @@ R12
 R10
 R3
 vmac
-R23
+R11
 !i10b 1
-!s100 cI?88VSB^J]QQkVRC?Z^A0
-R25
-IT7c;UP]<E3Zj@94BoRYj11
+!s100 gM<:dKW7iV4K4mVN>N1D03
+!s11b _Km0bHX:d1b;XAQ]9zTNA2
+ILh?1?]lV>BBGo;>gnoVaJ2
 R7
 R8
-w1577417472
-R26
-R27
+w1577425380
+R24
+R25
 L0 1
 R9
 r1
 !s85 0
 31
-Z34 !s108 1577417638.000000
-R28
-R29
+R12
+R26
+R27
 !i113 0
 R10
 R3
@@ -565,8 +565,30 @@ R18
 R10
 R3
 n@m@a@c_@packet
+vmac_rx
+Z33 !s110 1577426288
+!i10b 1
+!s100 lnG>eIlEC;ZATJDoSd[WS1
+!s11b 1=k3Ji2VU?D5kTgW=eYcN3
+I;1[6kFNVIi[]`U]cjKaoL0
+R7
+R8
+w1577425116
+8E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_rx.v
+FE:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_rx.v
+L0 1
+R9
+r1
+!s85 0
+31
+Z34 !s108 1577426288.000000
+!s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_rx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/mac_rx.v|
+!i113 0
+R10
+R3
 vmac_tx
-R23
+R33
 !i10b 1
 !s100 DW0L_0CgTg5BcCD@=]^Lb3
 !s11b Fi]^N9V3NoWGmQoSBjIoJ3
@@ -631,6 +653,28 @@ Z36 !s108 1576807012.000000
 !i113 0
 R10
 R3
+vrx_oper
+R33
+!i10b 1
+!s100 SXa0m2RbK6KU1k9`oWPfW1
+!s11b _khi:2R>3DDjJ0B]X>PmT0
+I=I6E<<`M0Vf9c8AHdPzUA3
+R7
+R8
+w1577426270
+8E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_oper.v
+FE:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_oper.v
+L0 1
+R9
+r1
+!s85 0
+31
+R34
+!s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_oper.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_oper.v|
+!i113 0
+R10
+R3
 vTM1640_cfg
 R35
 !i10b 1
@@ -680,12 +724,12 @@ n@t@m1640_driver
 vtop_tb
 R13
 !i10b 1
-!s100 o^2K9?hz@H>6BU:9:dKNm2
-!s11b AWn>>FCm0Vo_i7CoJjmYi0
-IjhZFXTTRNnGiL?cX2gB=a2
+!s100 94jBIA?lE6Xg=XE3YQfm`3
+!s11b c:KCJVPanoeRi_HJW6[V_1
+IP3eean>6L[;N;ZmHK[8Pn3
 R7
 R8
-w1577417504
+w1577425617
 8E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v
 FE:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v
 L0 3
@@ -693,14 +737,14 @@ R9
 r1
 !s85 0
 31
-R32
+R14
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/top_tb.v|
 !i113 0
 R10
 R3
 vtx_arp
-Z37 !s110 1577417639
+R33
 !i10b 1
 !s100 b[0;^Qld>_bCHVW@NZ;bj0
 R6
@@ -722,10 +766,10 @@ R34
 R10
 R3
 vtx_clk_gen
-R37
+R33
 !i10b 1
 !s100 SRXQ:`eeQ=:JNL^b@CdA61
-R24
+R23
 IE`e4Q^2KW_h:PzD?[n?if3
 R7
 R8
@@ -737,14 +781,14 @@ R9
 r1
 !s85 0
 31
-Z38 !s108 1577417639.000000
+R34
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_clk_gen.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_clk_gen.v|
 !i113 0
 R10
 R3
 vtx_eth
-R37
+Z37 !s110 1577426289
 !i10b 1
 !s100 2:1zeR^]iZW_KV:m4ckQU0
 R21
@@ -759,7 +803,7 @@ R9
 r1
 !s85 0
 31
-R38
+Z38 !s108 1577426289.000000
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_eth.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/tx_eth.v|
 !i113 0
@@ -769,7 +813,7 @@ vtx_ip
 R37
 !i10b 1
 !s100 HI]m9lLG:;K84I9B@U6V40
-R33
+R30
 IB=mh?cW]M2VH>9E=mzeGW1
 R7
 R8
@@ -832,7 +876,7 @@ R38
 R10
 R3
 vudp_datagram
-R30
+R28
 !i10b 1
 !s100 E`K@cfZ4[Q0FDi@_R1>?X1
 R39
@@ -847,7 +891,7 @@ R9
 r1
 !s85 0
 31
-R31
+R29
 !s107 E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/udp_datagram.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/udp_datagram.v|
 !i113 0

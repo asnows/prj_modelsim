@@ -182,7 +182,7 @@ begin
 				// eth_type
 				8'd12:
 				begin
-					m_tdata_reg 	<= eth_type[16:8];
+					m_tdata_reg 	<= eth_type[15:8];
 				end
 				8'd13:
 				begin
@@ -192,7 +192,7 @@ begin
 				// s_tdata_dly
 				8'd14:
 				begin
-					m_tdata_reg 	<= s_tdata_reg[16:8];
+					m_tdata_reg 	<= s_tdata_reg[15:8];
 					tready_reg 		<= 1'b1;
 				end
 				8'd15:

@@ -26,7 +26,13 @@ input       s_axis_tvalid   ,
 output      tx_data_clk,//generate data clk
 output 		tx_clk 	   , //trans data clk
 output[3:0] txd		   ,
-output 		tx_en      
+output 		tx_en      ,
+
+input 		rx_clk 	   , //trans data clk
+input[3:0]  rxd		   ,
+input 		rx_en      
+
+
 );
 
 mac_tx
@@ -48,7 +54,7 @@ mac_tx_I
 	.UDP_CheckSum(16'd0),
 
 
-	.s_axis_aclk		(s_axis_aclk	),
+	.s_axis_aclk	 (s_axis_aclk  ),
 	.s_axis_tdata    (s_axis_tdata ),
 	.s_axis_tlast    (s_axis_tlast ),
 	.s_axis_tready   (s_axis_tready),
@@ -62,6 +68,37 @@ mac_tx_I
 	.tx_en      (tx_en      )
 );
 
+mac_rx
+#(
+	.MEDIA_TYPES (MEDIA_TYPES) //100Base
+)
+mac_rx_I
+(
+	.dst_mac		 (),
+	.src_mac		(),
+	.eth_type		(),
+	.IP_TotLen		(),//Total Length
+	.IP_SrcAddr		(),
+	.IP_DestAddr	(),
+	.UDP_SrcPort	(),
+	.UDP_DestPort	(),
+	.UDP_TotLen  	(),//Total Length
+	.UDP_CheckSum	(),
+
+
+	.m_axis_aclk   (),
+	.m_axis_tdata ()   ,
+	.m_axis_tlast ()   ,
+	.m_axis_tready(1'b1)   ,
+	.m_axis_tuser ()   ,
+	.m_axis_tvalid()   ,
+
+
+
+	.rx_clk (rx_clk)	   , //trans data clk
+	.rxd	(rxd)	   ,
+	.rx_en (rx_en)     
+);
 
 
 
