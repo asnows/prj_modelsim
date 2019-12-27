@@ -374,11 +374,11 @@ localparam IP_DestAddr = 32'hc0_a8_c8_65;//192.168.200.101
 localparam UDP_SrcPort = 16'd1536;//192.168.200.101
 localparam UDP_DestPort = 16'd1536;//192.168.200.101
 
-eth_mac
+mac
 #(
 	.MEDIA_TYPES ( "1000Base") //100Base
 )
-eth_mac_I
+mac_I
 (
 .sys_clk (clk_125m),
 .dst_mac(DST_MAC),
