@@ -85,7 +85,7 @@ begin
 		STATE_IDEL:
 		begin
 			counts <= 8'd0;
-			m_tdata_reg = 8'hff;
+			m_tdata_reg <= 8'hff;
 			m_tvalid_reg <= 1'b0;
 			fcs_en <= 1'b0;
 			fcs_out <= 1'b0;

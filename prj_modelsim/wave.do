@@ -96,42 +96,69 @@ add wave -noupdate -group tx_ip /glbl/top_tb_i/mac_I/mac_tx_I/tx_ip_I/m_tdata_re
 add wave -noupdate -group tx_ip /glbl/top_tb_i/mac_I/mac_tx_I/tx_ip_I/m_tlast_reg
 add wave -noupdate -group tx_ip /glbl/top_tb_i/mac_I/mac_tx_I/tx_ip_I/m_tuser_reg
 add wave -noupdate -group tx_ip /glbl/top_tb_i/mac_I/mac_tx_I/tx_ip_I/m_tvalid_reg
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/dst_mac
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/src_mac
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/eth_type
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_aclk
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tdata
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tlast
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tready
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tuser
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tvalid
-add wave -noupdate -expand -group tx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_axis_tdata
-add wave -noupdate -expand -group tx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_axis_tvalid
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tdata_reg
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tdata_dly
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tvalid_reg
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tvalid_dly
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/state
-add wave -noupdate -expand -group tx_eth -radix decimal /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/counts
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tdata_dly
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tdata_reg
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tlast_dly
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tuser_dly
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tvalid_dly
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/tready_reg
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_en
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_reset
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_out
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_data_reg
-add wave -noupdate -expand -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_data
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/dst_mac
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/src_mac
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/eth_type
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_aclk
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tdata
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tlast
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tready
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tuser
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_axis_tvalid
+add wave -noupdate -group tx_eth -color Red -itemcolor Red -radix hexadecimal /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_axis_tdata
+add wave -noupdate -group tx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_axis_tvalid
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tdata_reg
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tdata_dly
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tvalid_reg
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/m_tvalid_dly
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/state
+add wave -noupdate -group tx_eth -radix decimal /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/counts
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tdata_dly
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tdata_reg
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tlast_dly
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tuser_dly
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/s_tvalid_dly
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/tready_reg
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_en
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_reset
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_out
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_data_reg
+add wave -noupdate -group tx_eth /glbl/top_tb_i/mac_I/mac_tx_I/tx_eth_I/fcs_data
 add wave -noupdate -group tx_oper /glbl/top_tb_i/mac_I/mac_tx_I/tx_oper_I/clk
 add wave -noupdate -group tx_oper /glbl/top_tb_i/mac_I/mac_tx_I/tx_oper_I/tvalid
 add wave -noupdate -group tx_oper /glbl/top_tb_i/mac_I/mac_tx_I/tx_oper_I/tdata
 add wave -noupdate -group tx_oper /glbl/top_tb_i/mac_I/mac_tx_I/tx_oper_I/tx_en
 add wave -noupdate -group tx_oper /glbl/top_tb_i/mac_I/mac_tx_I/tx_oper_I/txd
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/dst_mac
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/src_mac
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/eth_type
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/s_axis_aclk
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/s_axis_tdata
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/s_axis_tvalid
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_axis_tdata
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_axis_tlast
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_axis_tready
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_axis_tuser
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_axis_tvalid
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/dst_mac_reg
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/src_mac_reg
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/eth_type_reg
+add wave -noupdate -expand -group rx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_tdata_reg
+add wave -noupdate -expand -group rx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_tvalid_reg
+add wave -noupdate -expand -group rx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_tuser_reg
+add wave -noupdate -expand -group rx_eth -color Red -itemcolor Red /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/m_tlast_reg
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/state
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/counts
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/s_tdata_dly
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/s_tvalid_dly
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/fcs_en
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/fcs_reset
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/fcs_data_reg
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/fcs_err_reg
+add wave -noupdate -expand -group rx_eth /glbl/top_tb_i/mac_I/mac_rx_I/rx_eth_I/fcs_data
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {697009 ps} 0} {{Cursor 2} {256100 ps} 1}
-quietly wave cursor active 1
+WaveRestoreCursors {{Cursor 1} {396000 ps} 1} {{Cursor 2} {9644942 ps} 0}
+quietly wave cursor active 2
 configure wave -namecolwidth 418
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -146,4 +173,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {620522 ps} {833574 ps}
+WaveRestoreZoom {9615328 ps} {9672672 ps}

@@ -237,6 +237,7 @@ begin
 				
 				default:
 				begin
+					m_tdata_reg  <= counts;
 					if(counts == 8'd45)
 					begin
 						m_tlast_reg  <= 1'b1;

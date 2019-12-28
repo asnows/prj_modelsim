@@ -1,9 +1,9 @@
 module rx_eth
 (
 
-input[47:0] dst_mac,
-input[47:0] src_mac,
-input[15:0] eth_type,
+output[47:0] dst_mac	,
+output[47:0] src_mac	,
+output[15:0] eth_type	,
 input 	    s_axis_aclk		,
 input[7:0]  s_axis_tdata    ,
 input       s_axis_tvalid   ,
@@ -13,73 +13,72 @@ output       m_axis_tlast    ,
 input        m_axis_tready   ,
 output       m_axis_tuser    ,
 output       m_axis_tvalid   ,
+output		 fcs_err
   
 );
 
-
+localparam HSM = 8'd39,LSM=8'd32;
 localparam STATE_IDEL = 3'd0,STATE_PREA = 3'd1,STATE_HEAD = 3'd2,STATE_DATA = 3'd3,STATE_CRC = 3'd4;
-reg[7:0] preamble[8];
+reg[7:0]   preamble[7:0];
 
-input[47:0] dst_mac_reg;
-input[47:0] src_mac_reg;
-input[15:0] eth_type_reg;
-
+reg[47:0] dst_mac_reg ;
+reg[47:0] src_mac_reg ;
+reg[15:0] eth_type_reg;
 
 reg[7:0] m_tdata_reg = 8'hff;
-reg[7:0] m_tdata_dly = 8'hff;
-reg m_tvalid_reg = 1'b0;
-reg m_tvalid_dly = 1'b0;
+reg 	 m_tvalid_reg = 1'b0;
+reg 	 m_tuser_reg = 1'b0;
+reg 	 m_tlast_reg = 1'b0;
+
+reg[31:0] 	m_tdata_dly ;
+reg[3:0] 	m_tvalid_dly;
+reg[3:0]  	m_tuser_dly ;
+reg[3:0]  	m_tlast_dly ;
+
+
+
+
+
 
 
 reg[2:0] state = STATE_IDEL;
+reg[2:0] state2 = STATE_IDEL;
 reg[7:0] counts = 8'd0;
+reg[7:0] counts2 = 8'd0;
 
-reg[7:0]  s_tdata_dly , s_tdata_reg;
-reg s_tvalid_dly;
+reg[39:0] s_tdata_dly ;
+reg[4:0]  s_tvalid_dly;
 
-reg 	  	tready_reg =1'b1;
+
 reg			fcs_en = 1'b0;
 reg			fcs_reset = 1'b0;
-reg 		fcs_out = 1'b0;
+
 
 reg  [7:0]  fcs_data_reg;
 wire [31:0] fcs_data;
+reg fcs_err_reg = 1'b0;
 
 
 
 
 
 
-assign s_axis_tready = tready_reg;
-assign m_axis_tdata  = (fcs_out == 1'b1)? fcs_data_reg : m_tdata_dly ;
-assign m_axis_tvalid = m_tvalid_dly;
 
+assign dst_mac  = dst_mac_reg  ;
+assign src_mac  = src_mac_reg  ;
+assign eth_type = eth_type_reg ;
+assign m_axis_tdata  = m_tdata_reg ;
+assign m_axis_tvalid = m_tvalid_reg;
+assign fcs_err = fcs_err_reg;
 
 
 
 always@(posedge s_axis_aclk)
 begin
 
-	s_tvalid_dly  <= s_axis_tvalid ;
-	s_tdata_dly   <= s_axis_tdata;
-		
-end
-
-
-always@(posedge s_axis_aclk)
-begin
-	if((state == STATE_PREA) && (counts == 8'd1))
-	begin
-		s_tdata_reg <= s_tdata_dly;
-	end
-	
-end
-
-
-always@(posedge s_axis_aclk)
-begin
-	m_tdata_dly  <= m_tdata_reg;
-	m_tvalid_dly <= m_tvalid_reg;
+	s_tvalid_dly <= {s_tvalid_dly[4:0],s_axis_tvalid} ;
+	s_tdata_dly  <= {s_tdata_dly[31:0],s_axis_tdata}  ;
+				
 end
 
 
@@ -89,33 +88,41 @@ begin
 		STATE_IDEL:
 		begin
 			counts <= 8'd0;
-			m_tdata_reg = 8'hff;
+			m_tdata_reg  <= 8'hff;
 			m_tvalid_reg <= 1'b0;
+			m_tlast_reg  <= 1'b0; 	
 			fcs_en <= 1'b0;
-			fcs_out <= 1'b0;
-		
-			if((~s_tvalid_dly) & s_axis_tvalid)
+		    			
+			if((~s_tvalid_dly[4]) & s_tvalid_dly[3])
 			begin
-				state <= STATE_PREA;	
-				tready_reg <= 1'b0;
-				fcs_reset <= 1'b0;
+				state <= STATE_PREA;
+				fcs_reset <= 1'b0;	
+				fcs_err_reg <=1'b0;				
+				
 			end
 			else
 			begin
 				state <= STATE_IDEL;
-				tready_reg <= 1'b1;
-				fcs_reset <= 1'b1;
-			end
-			
-			
+				fcs_reset <= 1'b1;				
+			end					
 		end
 		STATE_PREA:
 		begin
 			counts <= counts + 1'b1;
-			preamble[counts] <= s_tdata_dly;
-			if(counts == 8'd8)
+			
+			preamble[7 - counts] <= s_tdata_dly[HSM:LSM];
+			
+			if(counts == 8'd6)
+			begin
+				fcs_en <= 1'b1;
+			end
+			
+			
+			if(counts == 8'd7)
 			begin
 				state <= STATE_HEAD;
+				counts <= 8'd0;
+				
 			end
 			
 		end
@@ -126,125 +133,100 @@ begin
 				// dst_mac
 				8'd0:
 				begin
-					m_tdata_reg 	<= dst_mac[47:40] <= s_tdata_dly ;
-					fcs_en <= 1'b1;
+					dst_mac_reg[47:40] <= s_tdata_dly[HSM:LSM] ;
+					
 				end
 				8'd1:
 				begin
-					m_tdata_reg 	<= dst_mac[39:32] <= s_tdata_dly;
+					dst_mac_reg[39:32] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd2:
 				begin
-					m_tdata_reg 	<= dst_mac[31:24] <= s_tdata_dly;
+					dst_mac_reg[31:24] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd3:
 				begin
-					m_tdata_reg 	<= dst_mac[23:16] <= s_tdata_dly;
+					dst_mac_reg[23:16] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd4:
 				begin
-					m_tdata_reg 	<= dst_mac[15:8] <= s_tdata_dly;
+					dst_mac_reg[15:8] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd5:
 				begin
-					m_tdata_reg 	<= dst_mac[7:0] <= s_tdata_dly;
+					dst_mac_reg[7:0] <= s_tdata_dly[HSM:LSM];
 				end
-				
 				// src_mac
 				8'd6:
 				begin
-					m_tdata_reg 	<= src_mac[47:40] <= s_tdata_dly;
+					src_mac_reg[47:40] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd7:
 				begin
-					m_tdata_reg 	<= src_mac[39:32] <= s_tdata_dly;
+					src_mac_reg[39:32] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd8:
 				begin
-					m_tdata_reg 	<= src_mac[31:24] <= s_tdata_dly;
+					src_mac_reg[31:24] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd9:
 				begin
-					m_tdata_reg 	<= src_mac[23:16] <= s_tdata_dly;
+					src_mac_reg[23:16] <= s_tdata_dly[HSM:LSM];
 				end
 				8'd10:
 				begin
-					m_tdata_reg 	<= src_mac[15:8]  <= s_tdata_dly;
+					src_mac_reg[15:8]  <= s_tdata_dly[HSM:LSM];
 				end
 				8'd11:
 				begin
-					m_tdata_reg 	<= src_mac[7:0]  <= s_tdata_dly;
+					src_mac_reg[7:0]  <= s_tdata_dly[HSM:LSM];
 				end
 				
 				// eth_type
 				8'd12:
 				begin
-					m_tdata_reg 	<= eth_type[15:8]<= s_tdata_dly;
+					eth_type_reg[15:8]<= s_tdata_dly[HSM:LSM];
 				end
 				8'd13:
 				begin
-					m_tdata_reg 	<= eth_type[7:0]<= s_tdata_dly;
+					eth_type_reg[7:0]<= s_tdata_dly[HSM:LSM];
 				end	
-					
-				// s_tdata_dly
+				
 				8'd14:
 				begin
-					m_tdata_reg 	<= s_tdata_reg[15:8];
-					tready_reg 		<= 1'b1;
-				end
-				8'd15:
-				begin
-					m_tdata_reg 	<= s_tdata_reg[7:0];
-					state 		<= STATE_DATA;	
+					m_tuser_reg 	<= 1'b1;
+					m_tdata_reg 	<= s_tdata_dly[HSM:LSM];
+					m_tvalid_reg    <= 1'b1;
+					state <= STATE_DATA;
 				end	
 
+				
 			endcase					
 		end
 		STATE_DATA:
 		begin
-			m_tdata_reg 	<= s_axis_tdata;
-			counts 		<= 8'd0;
-			if((~s_tlast_dly) & s_axis_tlast)
-			begin			
-				state <= STATE_CRC;	
-				tready_reg 	<= 1'b0;
-				
-				
-			end	
-					
-		end
-
-		STATE_CRC:
-		begin
-			counts <= counts + 1'b1;
+			m_tdata_reg 	<= s_tdata_dly[HSM:LSM];
+			m_tvalid_reg    <= s_tvalid_dly[0];
+			m_tuser_reg 	<= 1'b0;
+			counts 		    <= 8'd0;
 			
-			case(counts)
-				8'd0:
+			if(s_tvalid_dly[0] & (~s_axis_tvalid))
+			begin			
+				state <= STATE_IDEL;
+				m_tlast_reg <= 1'b1; 
+
+				if(fcs_data == s_tdata_dly[31:0])
 				begin
-					fcs_en <= 1'b0;
-					
-				end			
-				8'd1:
-				begin
-					fcs_out <= 1'b1;
-					fcs_data_reg 	<= fcs_data[31:24];
+					fcs_err_reg <= 1'b0;
 				end
-				8'd2:
+				else
 				begin
-					fcs_data_reg 	<= fcs_data[23:16];
+					fcs_err_reg <= 1'b1;
 				end
-				8'd3:
-				begin
-					fcs_data_reg 	<= fcs_data[15:8];
-				end
-				8'd4:
-				begin
-					fcs_data_reg 	<= fcs_data[7:0];
-					state 		    <= STATE_IDEL;
-					m_tvalid_reg    <= 1'b0;
-				end	
-			endcase
-		end
+
+				
+			end			
+		end	
 		
 		default:
 		begin
@@ -262,7 +244,7 @@ end
  (
 	 .Clk	(s_axis_aclk), 
 	 .Reset	(fcs_reset), 
-	 .Data_in(m_tdata_reg), 
+	 .Data_in(s_tdata_dly[31:24]), 
 	 .Enable(fcs_en), 
 	 .Crc   (fcs_data),
 	 .CrcNext()

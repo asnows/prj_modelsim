@@ -33,6 +33,16 @@ input 		rx_en
 wire 	  rx_tvalid;
 wire[7:0] rx_tdata; 
 
+
+wire[7:0]  m_eth_tdata    ;
+wire       m_eth_tlast    ;
+wire       m_eth_tready   ;
+wire       m_eth_tuser    ;
+wire       m_eth_tvalid   ;
+
+
+
+
 rx_oper rx_oper_I
 (
 	.rx_clk(rx_clk),
@@ -43,6 +53,23 @@ rx_oper rx_oper_I
 
 );
 
+rx_eth rx_eth_I
+(
+
+	.dst_mac	(dst_mac),
+	.src_mac	(src_mac),
+	.eth_type	(eth_type),
+	.s_axis_aclk	(rx_clk),
+	.s_axis_tdata    (rx_tdata),
+	.s_axis_tvalid   (rx_tvalid),
+
+	.m_axis_tdata    (m_eth_tdata ),
+	.m_axis_tlast    (m_eth_tlast ),
+	.m_axis_tready   (m_eth_tready),
+	.m_axis_tuser    (m_eth_tuser ),
+	.m_axis_tvalid   (m_eth_tvalid)
+  
+);
 
 
 
