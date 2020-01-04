@@ -56,7 +56,7 @@ assign ip_headCheck = ~(ip_Check[15:0] + ip_Check[23:16]);
 
 assign s_axis_tready =  (ip_enable == 1'b1)? s_tready_reg : m_axis_tready;
 assign m_axis_tdata  =  (ip_enable == 1'b1)? m_tdata_reg  : s_axis_tdata ;
-assign m_axis_tlast  =  (ip_enable == 1'b1)? s_tlast_dly  : s_axis_tlast ;
+assign m_axis_tlast  =  (ip_enable == 1'b1)? m_tlast_reg  : s_axis_tlast ;
 assign m_axis_tuser  =  (ip_enable == 1'b1)? m_tuser_reg  : s_axis_tuser ;
 assign m_axis_tvalid =  (ip_enable == 1'b1)? m_tvalid_reg : s_axis_tvalid; 
 
