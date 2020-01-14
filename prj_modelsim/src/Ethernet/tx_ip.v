@@ -102,6 +102,7 @@ begin
 		counts <= 8'd0;
 		m_tdata_reg  <=8'hff;
 		m_tuser_reg  <= 1'b0;
+		m_tlast_reg  <= 1'b0;
 		
 		if((~s_tuser_dly) & s_axis_tuser)
 		begin
@@ -227,6 +228,7 @@ begin
 		m_tdata_reg  <= s_axis_tdata;	
 		if((~s_tlast_dly) & s_axis_tlast)
 		begin
+			m_tlast_reg <= 1'b1;
 			state <= STATE_IDLE;
 		end
 

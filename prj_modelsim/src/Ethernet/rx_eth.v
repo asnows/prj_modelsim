@@ -68,6 +68,8 @@ assign dst_mac  = dst_mac_reg  ;
 assign src_mac  = src_mac_reg  ;
 assign eth_type = eth_type_reg ;
 assign m_axis_tdata  = m_tdata_reg ;
+assign m_axis_tlast  = m_tlast_reg ;
+assign m_axis_tuser	 = m_tuser_reg ;
 assign m_axis_tvalid = m_tvalid_reg;
 assign fcs_err = fcs_err_reg;
 

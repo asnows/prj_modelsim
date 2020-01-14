@@ -37,7 +37,7 @@ reg[15:0] UDP_CheckSum_reg	;
 reg [7:0] counts = 8'd0;
 
 reg[7:0]   s_tdata_dly;
-reg s_tlast_dly	; 
+reg s_tlast_dly,s_tlast_dly2; 
 reg s_tuser_dly	;	
 reg s_tvalid_dly;
 reg s_tready_reg;
@@ -67,6 +67,8 @@ begin
 	s_tuser_dly	  <= s_axis_tuser  ;
 	s_tvalid_dly  <= s_axis_tvalid ;
 	s_tdata_dly   <= s_axis_tdata  ;
+	
+	s_tlast_dly2 <= s_tlast_dly;
 end
 
 
@@ -146,9 +148,9 @@ begin
 		
 		STATE_DATA:
 		begin
-			m_tdata_reg  <= s_axis_tdata;
+			m_tdata_reg  <= s_tdata_dly;
 			m_tuser_reg  <= 1'b0;
-			if((~s_tlast_dly)& s_axis_tlast)
+			if((~s_tlast_dly2)& s_tlast_dly)
 			begin
 				m_tlast_reg  <= 1'b1;
 				state <= STATE_IDEL;

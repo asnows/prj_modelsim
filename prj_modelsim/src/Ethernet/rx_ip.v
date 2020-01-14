@@ -24,16 +24,16 @@ module rx_ip
 localparam STATE_IDLE = 2'd0,STATE_HEADER = 2'd1,STATE_DATA = 2'd2;
 
 
-reg[ 3:0] IP_Version_reg 	= 4'd4;
-reg[ 3:0] IP_HeaderLen_reg 	= 4'd5;
+reg[ 3:0] IP_Version_reg 	= 4'd0;
+reg[ 3:0] IP_HeaderLen_reg 	= 4'd0;
 reg[ 7:0] IP_TOS_reg 		= 8'd0;//Type of Service
-reg[15:0] IP_TotLen_reg 	= 16'D0
-reg[15:0] IP_ID_reg 		= 16'D0;
-reg[ 2:0] IP_Flags_reg 		= 3'd2;
-reg[13:0] IP_FraOff_reg 	= 13'd0;
-reg[ 7:0] IP_TTL_reg 		= 8'd64;
-reg[ 7:0] IP_Protocol_reg 	= 8'd17;//UDP
-reg[15:0] ip_headCheck_reg	= 16'D0;
+reg[15:0] IP_TotLen_reg 	= 16'd0;
+reg[15:0] IP_ID_reg 		= 16'd0;
+reg[ 2:0] IP_Flags_reg 		= 3'd0;
+reg[12:0] IP_FraOff_reg 	= 13'd0;
+reg[ 7:0] IP_TTL_reg 		= 8'd0;
+reg[ 7:0] IP_Protocol_reg 	= 8'd0;//UDP
+reg[15:0] ip_headCheck_reg	= 16'd0;
 reg[31:0] IP_SrcAddr_reg 	= 32'd0;
 reg[31:0] IP_DestAddr_reg	= 32'd0;
 reg ip_Check_err_Reg =1'b0;
@@ -47,7 +47,7 @@ wire[15:0]  ip_headCheck;
 reg [7:0] counts = 8'd0;
 
 reg[7:0]   s_tdata_dly ;
-reg s_tlast_dly	; 
+reg s_tlast_dly,s_tlast_dly2; 
 reg s_tready_dly;
 reg s_tuser_dly	;	
 reg s_tvalid_dly;
@@ -66,6 +66,12 @@ assign ip_Check  =  {4'd0,IP_Version_reg,IP_HeaderLen_reg,IP_TOS_reg} + {4'd0,IP
 assign ip_headCheck = ~(ip_Check[15:0] + ip_Check[23:16]);
 
 
+// assign ip_Check  =  {4'd0,IP_Version,IP_HeaderLen,IP_TOS} + {4'd0,IP_TotLen} + {4'd0,IP_ID} + {4'd0,IP_Flags,IP_FraOff} + {4'd0,IP_TTL,IP_Protocol}
+				 // +  {4'd0,IP_SrcAddr[31:16]} + {4'd0,IP_SrcAddr[15:0]}+ {4'd0,IP_DestAddr[31:16]} + {4'd0,IP_DestAddr[15:0]};
+
+// assign ip_headCheck = ~(ip_Check[15:0] + ip_Check[23:16]);
+
+
 assign IP_TotLen	= IP_TotLen_reg	;
 assign IP_Protocol  = IP_Protocol_reg;
 assign IP_SrcAddr	= IP_SrcAddr_reg;
@@ -74,7 +80,7 @@ assign IP_DestAddr  = IP_DestAddr_reg;
 
 assign s_axis_tready =  (ip_enable == 1'b1)? s_tready_reg : m_axis_tready;
 assign m_axis_tdata  =  (ip_enable == 1'b1)? m_tdata_reg  : s_axis_tdata ;
-assign m_axis_tlast  =  (ip_enable == 1'b1)? s_tlast_dly  : s_axis_tlast ;
+assign m_axis_tlast  =  (ip_enable == 1'b1)? m_tlast_reg  : s_axis_tlast ;
 assign m_axis_tuser  =  (ip_enable == 1'b1)? m_tuser_reg  : s_axis_tuser ;
 assign m_axis_tvalid =  (ip_enable == 1'b1)? m_tvalid_reg : s_axis_tvalid; 
 assign ip_Check_err  = ip_Check_err_Reg;
@@ -85,6 +91,8 @@ begin
 	s_tuser_dly	  <= s_axis_tuser  ;
 	s_tvalid_dly  <= s_axis_tvalid ;
 	s_tdata_dly	  <= s_axis_tdata ;
+	
+	s_tlast_dly2 <= s_tlast_dly;
 
 end
 
@@ -236,7 +244,7 @@ begin
 	begin
 		m_tdata_reg  <= s_tdata_dly;	
 		m_tuser_reg  <= 1'b0;
-		if((~s_tlast_dly) & s_axis_tlast)
+		if((~s_tlast_dly2) & s_tlast_dly)
 		begin
 			m_tlast_reg  <=  1'b1;
 			state <= STATE_IDLE;

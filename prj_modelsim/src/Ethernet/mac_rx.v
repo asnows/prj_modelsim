@@ -41,9 +41,9 @@ wire 	  rx_tvalid;
 wire[7:0] rx_tdata; 
 wire 	  s_axis_aclk;
 
-reg        ip_enable ;
-reg 	   udp_enable;
-reg 	   arp_enable;
+reg        ip_enable  = 1'b0;
+reg 	   udp_enable = 1'b0;
+reg 	   arp_enable = 1'b1;
 
 wire[7:0]  m_eth_tdata    ;
 wire       m_eth_tlast    ;
@@ -65,6 +65,12 @@ wire       m_udp_tlast    ;
 wire       m_udp_tready   ;
 wire       m_udp_tuser    ;
 wire       m_udp_tvalid   ;
+
+wire[7:0]  m_arp_tdata    ;
+wire       m_arp_tlast    ;
+wire       m_arp_tready   ;
+wire       m_arp_tuser    ;
+wire       m_arp_tvalid   ;
 
 
 assign s_axis_aclk = rx_clk;
@@ -166,11 +172,11 @@ rx_arp rx_arp_I
 	.s_axis_tuser (m_udp_tuser ),
 	.s_axis_tvalid(m_udp_tvalid),
 
-	.m_axis_tdata  (m_udp_tdata ),
-	.m_axis_tlast  (m_udp_tlast ),
-	.m_axis_tready (m_udp_tready),
-	.m_axis_tuser  (m_udp_tuser ),
-	.m_axis_tvalid (m_udp_tvalid)
+	.m_axis_tdata  (m_arp_tdata ),
+	.m_axis_tlast  (m_arp_tlast ),
+	.m_axis_tready (m_arp_tready),
+	.m_axis_tuser  (m_arp_tuser ),
+	.m_axis_tvalid (m_arp_tvalid)
 
 );
 
