@@ -1,10 +1,31 @@
+/*
+模块名称：tx_eth
+功能：
+	增加帧头和FCS,封装以太网帧。
+接口：
+	dst_mac	:目的MAC。
+	src_mac :源MAC。
+	eth_type:以太网类型。
+
+设计原理：
+	状态机:
+	STATE_IDEL =空闲状态,此状态下，等待一帧的开始信号tuser，当接收到上游的tuser时，同时拉低tready,通知上游暂停发送数据，以便先发送帧头数据。
+	STATE_PREA = 开始发送前导码，同时在发送第一个字节时（counts == 1）备份上游发来的数据（s_tdata_reg），以便在发送完以太网帧头后使用。
+	STATE_HEAD = 发送帧头，帧头发送完后，发送两个已备份的上游数据（s_tdata_reg），并把 tready 拉高通知上游继续发送数据。
+	STATE_DATA = 继续发送上游传来的数据，检测到上游的tlast后跳转到FCS发送阶段。
+	STATE_CRC  = 发送FCS。
+		
+*/
+
+
+
 module tx_eth
 (
 
 input[47:0] dst_mac,
 input[47:0] src_mac,
 input[15:0] eth_type,
-input 	    s_axis_aclk,
+input 	    s_axis_aclk		,
 input[7:0]  s_axis_tdata    ,
 input       s_axis_tlast    ,
 output      s_axis_tready   ,

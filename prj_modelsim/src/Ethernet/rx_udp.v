@@ -1,3 +1,20 @@
+/*
+模块名称：rx_ip
+功能：
+	拆封UDP包，获取UDP头。
+接口：
+	UDP_SrcPort  :源端口号。
+	UDP_DestPort :目的端口号。
+	UDP_TotLen	 :数据长度。
+	UDP_CheckSum :数据校验和。
+
+设计原理：
+	状态机:
+	STATE_IDEL =空闲状态,此状态下，等待一帧的开始信号tuser上升沿，当接收到上游的tuser上升沿时，跳转到STATE_HEAD
+	STATE_HEAD = 接收帧头，接收完帧头后，产生tuser 和tvalid 给下游接收模块使用。
+	STATE_DATA = 继续接收上游传来的数据，检测到上游的tvalid下降沿后跳转到STATE_IDEL。
+*/
+
 module rx_udp
 (
 

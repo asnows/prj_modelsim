@@ -1,3 +1,18 @@
+/*
+模块名称：tx_oper
+功能：
+	底层发送操作模块。
+接口：
+	clk    :发送时钟。
+	tvalid :数据有效。
+	tdata  :数据。
+
+设计原理：
+	分别使用ODDR 来产生发送数据txd 和发送只能tx_en
+	
+*/
+
+
 module tx_oper
 (
 	input clk,

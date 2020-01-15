@@ -1,3 +1,22 @@
+/*
+模块名称：rx_eth
+功能：
+	拆封以太网帧，获取以太网帧头。
+接口：
+	dst_mac	:目的MAC。
+	src_mac :源MAC。
+	eth_type:以太网类型。
+
+设计原理：
+	状态机:
+	STATE_IDEL =空闲状态,此状态下，等待一帧的开始信号tvalid上升沿，当接收到上游的tvalid上升沿时，跳转到STATE_PREA
+	STATE_PREA = 开始接收前导码。
+	STATE_HEAD = 接收帧头，接收完帧头后，产生tuser 和tvalid 给下游接收模块使用。
+	STATE_DATA = 继续接收上游传来的数据，检测到上游的tvalid下降沿后跳转到STATE_IDEL，并做FCS验证。
+	
+*/
+
+
 module rx_eth
 (
 

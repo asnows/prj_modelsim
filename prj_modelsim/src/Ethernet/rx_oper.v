@@ -1,3 +1,17 @@
+/*
+模块名称：rx_oper
+功能：
+	底层接收操作模块。
+接口：
+	tvalid :数据有效。
+	tdata  :数据。
+
+设计原理：
+	分别使用IDDR 来接收rxd 和rx_en
+	
+*/
+
+
 module rx_oper
 (
 	input rx_clk,

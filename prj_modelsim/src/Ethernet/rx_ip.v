@@ -1,3 +1,21 @@
+/*
+模块名称：rx_ip
+功能：
+	拆封IP包，获取IP头。
+接口：
+	IP_TotLen  :数据长度。
+	IP_SrcAddr :源IP。
+	IP_DestAddr:目的IP。
+
+
+设计原理：
+	状态机:
+	STATE_IDEL =空闲状态,此状态下，等待一帧的开始信号tuser上升沿，当接收到上游的tuser上升沿时，跳转到STATE_HEAD
+	STATE_HEAD = 接收帧头，接收完帧头后，产生tuser 和tvalid 给下游接收模块使用。
+	STATE_DATA = 继续接收上游传来的数据，检测到上游的tvalid下降沿后跳转到STATE_IDEL。
+*/
+
+
 module rx_ip
 (
 	output[15:0] IP_TotLen	,//Total Length
@@ -64,12 +82,6 @@ assign ip_Check  =  {4'd0,IP_Version_reg,IP_HeaderLen_reg,IP_TOS_reg} + {4'd0,IP
 				 +  {4'd0,IP_SrcAddr_reg[31:16]} + {4'd0,IP_SrcAddr_reg[15:0]}+ {4'd0,IP_DestAddr_reg[31:16]} + {4'd0,IP_DestAddr_reg[15:0]};
 
 assign ip_headCheck = ~(ip_Check[15:0] + ip_Check[23:16]);
-
-
-// assign ip_Check  =  {4'd0,IP_Version,IP_HeaderLen,IP_TOS} + {4'd0,IP_TotLen} + {4'd0,IP_ID} + {4'd0,IP_Flags,IP_FraOff} + {4'd0,IP_TTL,IP_Protocol}
-				 // +  {4'd0,IP_SrcAddr[31:16]} + {4'd0,IP_SrcAddr[15:0]}+ {4'd0,IP_DestAddr[31:16]} + {4'd0,IP_DestAddr[15:0]};
-
-// assign ip_headCheck = ~(ip_Check[15:0] + ip_Check[23:16]);
 
 
 assign IP_TotLen	= IP_TotLen_reg	;

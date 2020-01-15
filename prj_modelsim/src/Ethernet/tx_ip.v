@@ -1,3 +1,21 @@
+/*
+模块名称：tx_ip
+功能：
+	增加IP帧头,封装IP包。
+接口：
+	IP_TotLen  :数据长度。
+	IP_SrcAddr :源IP。
+	IP_DestAddr:目的IP。
+
+设计原理：
+	状态机:
+	STATE_IDEL =空闲状态,此状态下，等待一帧的开始信号tuser，当接收到上游的tuser时，同时拉低tready,通知上游暂停发送数据，以便先发送帧头数据。
+	STATE_HEAD = 备份上游发来的数据（s_tdata_reg），以便在发送完以太网帧头后使用。发送帧头，帧头发送完后，发送两个已备份的上游数据（s_tdata_reg），并把 tready 拉高通知上游继续发送数据。
+	STATE_DATA = 继续发送上游传来的数据，检测到上游的tlast后跳转到IDEL。
+
+		
+*/
+
 module tx_ip
 (
 	input[15:0] IP_TotLen,//Total Length
