@@ -48,7 +48,7 @@ localparam DATA_WIDTH = 11;
       .WRERR(),                 // 1-bit output: Write error
       // ECC Signals: 1-bit (each) input: Error Correction Circuitry ports
       .INJECTDBITERR(1'b0), // 1-bit input: Inject a double bit error input
-      .INJECTSBITERR(1'b1),
+      .INJECTSBITERR(1'b0),
       // Read Control Signals: 1-bit (each) input: Read clock, enable and reset input signals
       .RDCLK(clk),                 // 1-bit input: Read clock
       .RDEN(rd_en),                   // 1-bit input: Read enable
@@ -66,51 +66,6 @@ localparam DATA_WIDTH = 11;
 
 
 
-//  <-----Cut code below this line---->
-
-   // FIFO_SYNC_MACRO: Synchronous First-In, First-Out (FIFO) RAM Buffer
-   //                  Artix-7
-   // Xilinx HDL Language Template, version 2018.2
-
-   /////////////////////////////////////////////////////////////////
-   // DATA_WIDTH | FIFO_SIZE | FIFO Depth | RDCOUNT/WRCOUNT Width //
-   // ===========|===========|============|=======================//
-   //   37-72    |  "36Kb"   |     512    |         9-bit         //
-   //   19-36    |  "36Kb"   |    1024    |        10-bit         //
-   //   19-36    |  "18Kb"   |     512    |         9-bit         //
-   //   10-18    |  "36Kb"   |    2048    |        11-bit         //
-   //   10-18    |  "18Kb"   |    1024    |        10-bit         //
-   //    5-9     |  "36Kb"   |    4096    |        12-bit         //
-   //    5-9     |  "18Kb"   |    2048    |        11-bit         //
-   //    1-4     |  "36Kb"   |    8192    |        13-bit         //
-   //    1-4     |  "18Kb"   |    4096    |        12-bit         //
-   /////////////////////////////////////////////////////////////////
-
-   // FIFO_SYNC_MACRO  #(
-      // .DEVICE("7SERIES"), // Target Device: "7SERIES" 
-      // .ALMOST_EMPTY_OFFSET(9'h080), // Sets the almost empty threshold
-      // .ALMOST_FULL_OFFSET(9'h080),  // Sets almost full threshold
-      // .DATA_WIDTH(DATA_WIDTH), // Valid values are 1-72 (37-72 only valid when FIFO_SIZE="36Kb")
-      // .DO_REG(0),     // Optional output register (0 or 1)
-      // .FIFO_SIZE ("36Kb")  // Target BRAM: "18Kb" or "36Kb" 
-   // ) FIFO_SYNC_MACRO_inst (
-      // .ALMOSTEMPTY(), // 1-bit output almost empty
-      // .ALMOSTFULL(),   // 1-bit output almost full
-      // .DO(dout),                   // Output data, width defined by DATA_WIDTH parameter
-      // .EMPTY(empty),             // 1-bit output empty
-      // .FULL(full),               // 1-bit output full
-      // .RDCOUNT(),         // Output read count, width determined by FIFO depth
-      // .RDERR(),             // 1-bit output read error
-      // .WRCOUNT(),         // Output write count, width determined by FIFO depth
-      // .WRERR(),             // 1-bit output write error
-      // .CLK(clk),                 // 1-bit input clock
-      // .DI(din),                   // Input data, width defined by DATA_WIDTH parameter
-      // .RDEN(rd_en),               // 1-bit input read enable
-      // .RST(srst),                 // 1-bit input reset
-      // .WREN(wr_en)                // 1-bit input write enable
-    // );
-
-   // End of FIFO_SYNC_MACRO_inst instantiation
 
 
 

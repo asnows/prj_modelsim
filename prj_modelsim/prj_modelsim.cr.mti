@@ -68,6 +68,13 @@ Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 Top level modules:
 	lvds_rx
 
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/imgProcess/maxtri3x3_shift.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/imgProcess/maxtri3x3_shift.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module maxtri3x3_shift
+
+Top level modules:
+	maxtri3x3_shift
+
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/imgProcess/bayer2rgb.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/imgProcess/bayer2rgb.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 -- Compiling module bayer2rgb
@@ -145,6 +152,13 @@ Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
 
 Top level modules:
 	lvds_bitslip
+
+} {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/SimFile/verilog/tb_imgProcess.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/SimFile/verilog/tb_imgProcess.v
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module tb_imgProcess
+
+Top level modules:
+	tb_imgProcess
 
 } {} {}} E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_udp.v {1 {vlog -work work -vopt -stats=none E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/Ethernet/rx_udp.v
 Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019

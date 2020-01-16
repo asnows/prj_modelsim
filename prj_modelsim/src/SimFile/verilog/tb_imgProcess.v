@@ -23,6 +23,35 @@ module tb_imgProcess
     wire          vcap_m_axis_tvalid;  
 	wire cap_tready;	
 	
+	reg read_en_dly = 1'b0;
+	reg[7:0] couts = 8'd0;
+	
+	
+	always@(posedge clk)
+	begin
+		if(~resetn)
+		begin
+			couts <= 8'd0;
+		end
+		else
+		begin
+			if(couts <= 8'd200)
+			begin
+				couts <= couts + 1'b1;
+			end
+		end	
+	end
+
+	always@(posedge clk)
+	begin
+		if(couts > 8'd16)
+		begin
+			read_en_dly <= 1'b1;
+		end
+		
+	end
+	
+
 
 
     // v_tc_0 v_tc_0_i
@@ -51,7 +80,7 @@ module tb_imgProcess
 	read_file_i
 	(
 		.clk      (clk),  
-		.read_en  (cap_tready & resetn),
+		.read_en  (cap_tready & read_en_dly),
 		.data_valid(read_file_valid),
 		.data_out (file_data)
 	);    

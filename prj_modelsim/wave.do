@@ -90,6 +90,22 @@ add wave -noupdate -group img_maxtri3x3 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_
 add wave -noupdate -group img_maxtri3x3 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1_rd_ctrl
 add wave -noupdate -group img_maxtri3x3 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_2_wr_ctrl
 add wave -noupdate -group img_maxtri3x3 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_2_rd_ctrl
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/clk
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/write_en
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/stop_en
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/data_in
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/done
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/write_count
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/done_reg
+add wave -noupdate -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/data_wr0
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/clk
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/srst
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/din
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/wr_en
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/rd_en
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/dout
+add wave -noupdate -group img_buff1 /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/full
+add wave -noupdate /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/empty
 add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/FIFO36E1_inst/ALMOSTEMPTY
 add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/FIFO36E1_inst/ALMOSTFULL
 add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/FIFO36E1_inst/DBITERR
@@ -114,16 +130,8 @@ add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/
 add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/FIFO36E1_inst/RSTREG
 add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/FIFO36E1_inst/WRCLK
 add wave -noupdate -group img_FIFO36E /glbl/top_tb_i/tb_img_I/maxtri3x3_shift_i/line_buff_1/FIFO36E1_inst/WREN
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/clk
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/write_en
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/stop_en
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/data_in
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/done
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/write_count
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/done_reg
-add wave -noupdate -expand -group img_write_file /glbl/top_tb_i/tb_img_I/write_file_0/data_wr0
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {396000 ps} 1} {{Cursor 2} {25883277043 ps} 0}
+WaveRestoreCursors {{Cursor 1} {21170000 ps} 1} {{Cursor 2} {690000 ps} 0}
 quietly wave cursor active 2
 configure wave -namecolwidth 418
 configure wave -valuecolwidth 92
@@ -139,4 +147,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {24956894010 ps} {29730550842 ps}
+WaveRestoreZoom {0 ps} {45590 ps}

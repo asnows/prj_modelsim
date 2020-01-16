@@ -64,7 +64,7 @@ module top_tb
     begin
 
 	 #0 resetn = 1'b0;	
-     #100 resetn = 1;
+     #500 resetn = 1;
 
     end
 
