@@ -4,6 +4,8 @@ module top_tb
 (
 );
 
+	localparam IMG_WIDTH = 2560,IMG_HEIGHT =1440;
+	localparam DATA_WIDTH = 8;
     reg clk_200m,clk_50m,clk_500m,clk_1000m,clk_100m,clk_125m;
 	reg clk_445_5m;
     wire clk;
@@ -349,21 +351,70 @@ lvds_i
 
 wire      tx_data_clk;
 
-axis_master
-#(
-	.DATA_NUM (1024)
-)
-axis_master_I
-(
-	.clk(tx_data_clk),
-	.reset(~resetn),
-	.m_axis_tdata   (m_tdata ) ,
-	.m_axis_tlast   (m_tlast ) ,
-	.m_axis_tready  (m_tready) ,
-	.m_axis_tuser   (m_tuser ) ,
-	.m_axis_tvalid  (m_tvalid) 
+// axis_master
+// #(
+	// .DATA_NUM (1024)
+// )
+// axis_master_I
+// (
+	// .clk(tx_data_clk),
+	// .reset(~resetn),
+	// .m_axis_tdata   (m_tdata ) ,
+	// .m_axis_tlast   (m_tlast ) ,
+	// .m_axis_tready  (m_tready) ,
+	// .m_axis_tuser   (m_tuser ) ,
+	// .m_axis_tvalid  (m_tvalid) 
 
+// );
+
+
+
+wire [7:0] file_data;
+wire read_file_valid;
+wire cap_tready;
+
+read_file
+#(
+	.DATA_WIDTH(DATA_WIDTH      ) ,
+	.FILE_SIZE (IMG_WIDTH*IMG_HEIGHT ),
+	.FILE_NAME( "E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/SimFile/images/src_sc4210_2560x1440.raw")
+)
+read_file_i
+(
+	.clk      (tx_data_clk),  
+	.read_en  (cap_tready & resetn),
+	.data_valid(read_file_valid),
+	.data_out (file_data)
 );
+	
+	
+	video_caputure 
+	#(
+		.DATA_WIDTH(DATA_WIDTH),
+		.IMG_WIDTH (IMG_WIDTH*IMG_HEIGHT )
+	)
+	video_caputure_0_i
+	(
+
+		.vsync(~resetn  ),
+		.s_axis_aclk  (tx_data_clk),
+		.s_axis_tready(cap_tready),
+
+		.s_axis_tdata (file_data ),
+		.s_axis_tkeep (1'b1 ),
+		.s_axis_tlast (1'b1 ),
+		.s_axis_tvalid(read_file_valid ),
+
+		.m_axis_tdata (m_tdata ) ,
+		.m_axis_tlast (m_tlast ) ,
+		.m_axis_tuser (m_tuser ) ,
+		.m_axis_tvalid(m_tvalid) ,
+		.m_axis_tready(m_tready)
+	);
+
+
+
+	
 
 
 localparam DST_MAC = 48'h08_57_00_f4_ae_e5;
@@ -377,6 +428,15 @@ localparam UDP_DestPort = 16'd1536;//192.168.200.101
 wire 		tx_clk ;	
 wire[3:0]   txd	;	  
 wire 		tx_en;      
+
+
+wire 	   mac_m_axis_aclk	 ;
+wire[7:0]  mac_m_axis_tdata    ;
+wire       mac_m_axis_tlast    ;
+wire       mac_m_axis_tready = 1'b1   ;
+wire       mac_m_axis_tuser    ;
+wire       mac_m_axis_tvalid   ;
+
 
 
 mac
@@ -404,6 +464,13 @@ mac_I
 .s_axis_tuser    (m_tuser ) ,
 .s_axis_tvalid   (m_tvalid) ,
 
+.m_axis_aclk   (mac_m_axis_aclk	 ),
+.m_axis_tdata  (mac_m_axis_tdata ),
+.m_axis_tlast  (mac_m_axis_tlast ),
+.m_axis_tready (mac_m_axis_tready),
+.m_axis_tuser  (mac_m_axis_tuser ),
+.m_axis_tvalid (mac_m_axis_tvalid),
+
 .tx_data_clk(tx_data_clk),//generate data clk
 .tx_clk 	 (tx_clk)  , //trans data clk
 .txd		 (txd)  ,
@@ -415,6 +482,21 @@ mac_I
 
 );
 
+
+write_file
+#(
+	.DATA_WIDTH(DATA_WIDTH),
+	.FILE_SIZE (IMG_WIDTH*IMG_HEIGHT),
+	.FILE_NAME ( "E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/SimFile/images/dst_sc4210_2560x1440.raw")
+)
+write_file_0
+(
+	.clk(mac_m_axis_aclk),  
+	.write_en(mac_m_axis_tvalid ),
+	.stop_en(1'b1),
+	.data_in (mac_m_axis_tdata)
+
+);
 
 
 endmodule

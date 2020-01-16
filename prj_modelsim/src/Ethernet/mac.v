@@ -22,6 +22,13 @@ output      s_axis_tready   ,
 input       s_axis_tuser    ,
 input       s_axis_tvalid   ,
 
+output 	     m_axis_aclk	,
+output[7:0]  m_axis_tdata    ,
+output       m_axis_tlast    ,
+input      	 m_axis_tready   ,
+output       m_axis_tuser    ,
+output       m_axis_tvalid   ,
+
 
 output      tx_data_clk,//generate data clk
 output 		tx_clk 	   , //trans data clk
@@ -86,12 +93,12 @@ mac_rx_I
 	.UDP_CheckSum	(),
 
 
-	.m_axis_aclk   (),
-	.m_axis_tdata ()   ,
-	.m_axis_tlast ()   ,
-	.m_axis_tready(1'b1)   ,
-	.m_axis_tuser ()   ,
-	.m_axis_tvalid()   ,
+	.m_axis_aclk   (m_axis_aclk	 ),
+	.m_axis_tdata  (m_axis_tdata ),
+	.m_axis_tlast  (m_axis_tlast ),
+	.m_axis_tready (m_axis_tready),
+	.m_axis_tuser  (m_axis_tuser ),
+	.m_axis_tvalid (m_axis_tvalid),
 
 
 

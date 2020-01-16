@@ -41,9 +41,9 @@ wire 	  rx_tvalid;
 wire[7:0] rx_tdata; 
 wire 	  s_axis_aclk;
 
-reg        ip_enable  = 1'b0;
-reg 	   udp_enable = 1'b0;
-reg 	   arp_enable = 1'b1;
+reg        ip_enable  = 1'b1;
+reg 	   udp_enable = 1'b1;
+reg 	   arp_enable = 1'b0;
 
 wire[7:0]  m_eth_tdata    ;
 wire       m_eth_tlast    ;
@@ -75,6 +75,14 @@ wire       m_arp_tvalid   ;
 
 assign s_axis_aclk = rx_clk;
 assign m_axis_aclk = rx_clk;
+
+
+assign m_axis_tdata   = m_arp_tdata  ;
+assign m_axis_tlast   = m_arp_tlast  ;
+assign m_arp_tready   = m_axis_tready ;
+assign m_axis_tuser   = m_arp_tuser  ;
+assign m_axis_tvalid  = m_arp_tvalid ;
+
 
 
 rx_oper rx_oper_I

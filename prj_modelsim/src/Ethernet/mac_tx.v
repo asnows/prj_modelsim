@@ -71,9 +71,9 @@ wire       s_eth_tuser   ;
 wire       s_eth_tvalid  ;
 
 
-reg udp_enable = 1'b0;
-reg ip_enable = 1'b0;
-reg arp_enable = 1'b1;
+reg udp_enable = 1'b1;
+reg ip_enable = 1'b1;
+reg arp_enable = 1'b0;
 
 
 

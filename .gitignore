@@ -1,0 +1,5 @@
+# User-specific files 
+prj_modelsim/wlft*
+prj_modelsim/work/*
+prj_ipdevelop/*.sim/*
+prj_ipdevelop/vivado_*
