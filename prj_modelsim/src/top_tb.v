@@ -140,13 +140,24 @@ module top_tb
 TCD1290D_driver TCD1290D_driver_I
 (
 	.sys_clk(clk_100m),
-	.f1_cnt(20'd50),
+	.f1_cnt(10'd50),
 	.sh(),
 	.f1(),
 	.f2(),
 	.f2b(),
 	.rs(),
 	.cp()
+
+);
+
+S12379_driver S12379_driver_i
+(
+.sys_clk(clk_100m),
+.f1_cnt(8'd2),
+.sh(),
+.f1(),
+.f2(),
+.rs()
 
 );
 
