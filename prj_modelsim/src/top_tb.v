@@ -130,12 +130,24 @@ module top_tb
 // );
 
 
-tb_imgProcess tb_img_I
+// tb_imgProcess tb_img_I
+// (
+	// .clk(clk_100m),
+	// .resetn(resetn)
+
+// );
+
+TCD1290D_driver TCD1290D_driver_I
 (
-	.clk(clk_100m),
-	.resetn(resetn)
+	.sys_clk(clk_100m),
+	.f1_cnt(20'd50),
+	.sh(),
+	.f1(),
+	.f2(),
+	.f2b(),
+	.rs(),
+	.cp()
 
 );
-
 
 endmodule
