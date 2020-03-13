@@ -64,7 +64,7 @@ module top_tb
     begin
 
 	 #0 resetn = 1'b0;	
-     #500 resetn = 1;
+     #510 resetn = 1;
 
     end
 
@@ -158,6 +158,20 @@ S12379_driver S12379_driver_i
 .f1(),
 .f2(),
 .rs()
+
+);
+
+AD9945_cfg AD9945_cfg_I
+(
+.sys_clk(clk_50m),
+.Oper(7'b1010101)		,
+.Ctrl(7'b1010101)		,
+.Clamp(8'b10101010)	    ,
+.VGA_Gain(10'b1010101010)	,
+.cfg_en	(resetn)	,
+.SDATA()		,
+.SCK()			,
+.SL()
 
 );
 
