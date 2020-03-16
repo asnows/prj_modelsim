@@ -12,7 +12,15 @@
 	f2b		:电荷输出脉冲;
 	rs		:输出极复位脉冲;
 	cp		:钳位脉冲（保持住电压水平）
-
+设计原理：
+	状态机：
+		转移图：
+			上电 -> STATUS_IDEL ——（延时 LOAD_PLUS_WIDTH）——>STATUS_LOAD ——（延时 LOAD_PLUS_WIDTH）——> STATUS_TRAN——（发送完LINE_WIDTH）——>  STATUS_IDEL；
+		操作：
+		STATUS_IDEL：所有信号初始化为0；
+		STATUS_LOAD：f1_reg拉高，经过t1后sh_reg拉高，再经过t2、t3后sh_reg拉低，经过t4,t5后f1_reg拉低；
+		STATUS_TRAN：根据div_cnt生成f1_reg脉冲。
+		
 */
 
 module TCD1290D_driver

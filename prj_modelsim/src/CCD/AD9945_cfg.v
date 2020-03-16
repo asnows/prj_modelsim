@@ -4,7 +4,7 @@
 功能：
 	AD9945 配置模块
 参数:
-	sys_clk 	: 系统输入时钟，最大50mhz；
+	sys_clk 	: 系统输入时钟，最大50mhz,典型用20或者25m；
 	Oper		: Operation 操作寄存器；
 	Ctrl		: Control 控制寄存器;
 	Clamp		: ClampLevel 黑电平钳位寄存器；

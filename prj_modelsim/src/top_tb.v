@@ -137,11 +137,14 @@ module top_tb
 
 // );
 
+
+wire TCD1290D_sh,TCD1290D_f2,TCD1290D_rs;
+
 TCD1290D_driver TCD1290D_driver_I
 (
 	.sys_clk(clk_100m),
 	.f1_cnt(10'd50),
-	.sh(),
+	.sh(TCD1290D_sh),
 	.f1(),
 	.f2(),
 	.f2b(),
@@ -174,5 +177,31 @@ AD9945_cfg AD9945_cfg_I
 .SL()
 
 );
+
+
+
+ AD9945_driver
+#(
+	.D_WIDTH (8),
+	.RS_P_WIDTH(2),//RS High Pulse Width,单位10ns
+	.SAMP_NUM (12'2048 )// 一帧采样数
+);
+AD9945_driver_i
+(
+.sys_clk(clk_100m),
+.sh(TCD1290D_sh),
+.f2(TCD1290D_f2),
+.rs(TCD1290D_rs),
+.SHP(),
+.SHD(),
+.DATACLK(),
+.DATA_IN(8'd55),
+
+.tdata(),
+.tvalid()
+
+
+);
+
 
 endmodule
