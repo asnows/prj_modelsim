@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Mar 17 15:59:17 2020
+# Process ID: 6644
+# Current directory: E:/WorkSpace/project/FPGA/prj_modelsim/prj_iptest
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent760 E:\WorkSpace\project\FPGA\prj_modelsim\prj_iptest\prj_iptest.xpr
+# Log file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_iptest/vivado.log
+# Journal file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_iptest\vivado.jou
+#-----------------------------------------------------------
+CRITICAL WARNING: [Common 17-1240] XILINX_TCLAPP_REPO is pointed to a location 'D:\Xilinx\Vivado\2018.1\data\XilinxTclStore' which does not exist or could not be read. The XilinxTclStore has been reverted to the installation area.
+start_gui
+open_project E:/WorkSpace/project/FPGA/prj_modelsim/prj_iptest/prj_iptest.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 818.617 ; gain = 158.316
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 16:14:16 2020...

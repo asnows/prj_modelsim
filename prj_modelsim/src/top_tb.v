@@ -138,70 +138,42 @@ module top_tb
 // );
 
 
-wire TCD1290D_sh,TCD1290D_f2,TCD1290D_rs;
-
-TCD1290D_driver TCD1290D_driver_I
+TCD1209D
+#(
+	.D_WIDTH(8)
+)
+TCD1209D_i
 (
-	.sys_clk(clk_100m),
-	.f1_cnt(10'd50),
-	.sh(TCD1290D_sh),
-	.f1(),
-	.f2(),
-	.f2b(),
-	.rs(),
-	.cp()
-
-);
-
-S12379_driver S12379_driver_i
-(
+// TCD1290D_driver
 .sys_clk(clk_100m),
-.f1_cnt(8'd2),
+.f1_cnt(50),
 .sh(),
 .f1(),
 .f2(),
-.rs()
+.f2b(),
+.rs(),
+.cp(),
 
-);
+//AD9945_cfg
+.Oper		(7'b1010101),
+.Ctrl		(7'b1010101),
+.Clamp		(8'b01010101),
+.VGA_Gain	(10'b0101010101),
+.cfg_en		(resetn),
+.SDATA		(),
+.SCK			(),
+.SL			(),
 
-AD9945_cfg AD9945_cfg_I
-(
-.sys_clk(clk_50m),
-.Oper(7'b1010101)		,
-.Ctrl(7'b1010101)		,
-.Clamp(8'b10101010)	    ,
-.VGA_Gain(10'b1010101010)	,
-.cfg_en	(resetn)	,
-.SDATA()		,
-.SCK()			,
-.SL()
-
-);
-
-
-
- AD9945_driver
-#(
-	.D_WIDTH (8),
-	.RS_P_WIDTH(2),//RS High Pulse Width,单位10ns
-	.SAMP_NUM (12'2048 )// 一帧采样数
-);
-AD9945_driver_i
-(
-.sys_clk(clk_100m),
-.sh(TCD1290D_sh),
-.f2(TCD1290D_f2),
-.rs(TCD1290D_rs),
-.SHP(),
-.SHD(),
-.DATACLK(),
-.DATA_IN(8'd55),
-
+//AD9945_driver
+.SHP			(),
+.SHD			(),
+.DATACLK		(),
+.CLPOB		(),
+.PBLK		(),
+.DATA_IN(55),
 .tdata(),
 .tvalid()
 
-
 );
-
 
 endmodule

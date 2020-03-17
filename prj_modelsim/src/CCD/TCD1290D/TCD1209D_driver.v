@@ -23,7 +23,7 @@
 		
 */
 
-module TCD1290D_driver
+module TCD1209D_driver
 (
 input  sys_clk,
 input[9:0]f1_cnt,
@@ -123,7 +123,8 @@ begin
 		
 			if(pxl_cnt < LINE_WIDTH)
 			begin
-				if((~f1_dly) & f1_reg) //检测f1上升沿
+				//if((~f1_dly) & f1_reg) //检测f1上升沿
+				if(f1_dly & (~f1_reg)) //检测f1上升沿
 				begin
 					pxl_cnt <= pxl_cnt + 1'b1;
 				end

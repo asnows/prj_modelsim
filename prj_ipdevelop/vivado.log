@@ -1,23 +1,378 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Dec 27 14:12:35 2019
-# Process ID: 9476
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Mar 17 14:34:48 2020
+# Process ID: 14116
 # Current directory: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent760 E:\WorkSpace\project\FPGA\prj_modelsim\prj_ipdevelop\prj_ipdevelop.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6384 E:\WorkSpace\project\FPGA\prj_modelsim\prj_ipdevelop\prj_ipdevelop.xpr
 # Log file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/vivado.log
 # Journal file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop\vivado.jou
 #-----------------------------------------------------------
-INFO: [Common 17-748] XILINX_TCLAPP_REPO is set to 'D:/Xilinx/Vivado/2018.1/data/XilinxTclStore'. Refresh XilinxTclStore catalog is disabled when XILINX_TCLAPP_REPO is set.
+CRITICAL WARNING: [Common 17-1240] XILINX_TCLAPP_REPO is pointed to a location 'D:\Xilinx\Vivado\2018.1\data\XilinxTclStore' which does not exist or could not be read. The XilinxTclStore has been reverted to the installation area.
 start_gui
 open_project E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.xpr
 Scanning sources...
 Finished scanning sources
+INFO: [Project 1-230] Project 'prj_ipdevelop.xpr' upgraded for this version of Vivado.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 885.230 ; gain = 134.859
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 831.477 ; gain = 169.902
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 27 16:01:02 2019...
+add_files -norecurse E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/imgProcess/video_caputure.v
+update_compile_order -fileset sources_1
+set_property top video_caputure [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Mar 17 14:52:21 2020] Launched synth_1...
+Run output will be captured here: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1170.059 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clkin_p]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[3]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[2]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[3]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[2]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/MMCME2_BASE_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/MMCME2_BASE_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/IDELAYCTRL_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/IDELAYCTRL_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1257.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 1411.465 ; gain = 518.391
+write_verilog -m
+ERROR: [Common 17-157] Error parsing command line options, please type 'write_verilog -help' for usage info.
+write_verilog -mode synth_stub E:\WorkSpace\project\FPGA\prj_modelsim\ip_repo\video_capture\video_capture.v
+ERROR: [Common 17-36] Cannot write file [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/WorkSpaceprojectFPGAprj_modelsimip_repoideo_captureideo_capture.v]: Invalid argument
+write_verilog -mode synth_stub E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v
+E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v
+write_edif e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.edf
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1840.582 ; gain = 0.000
+e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.edf
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v:]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_data_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_clk_n' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_clk_p' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'rx_data_clk': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'rx_data_clk': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_n': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_n': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_p': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_p': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rx_data_clk': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'rx_data_clk': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_n': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_n': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_p': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_p': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.tmp e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 2022.008 ; gain = 23.695
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2039.820 ; gain = 41.508
+ipx::current_core e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/component.xml
+update_compile_order -fileset sources_1
+close_project
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/video_capture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/11
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/11/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'video_capture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "video_capture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/11/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/11/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+write_verilog -mode synth_stub e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/videoCapture.v
+e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/videoCapture.v
+write_edif e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/videoCapture.edf
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2039.820 ; gain = 0.000
+e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/videoCapture.edf
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/videoCapture.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/video_capture.v:]
+ERROR: [IP_Flow 19-264] [HDL Parser] No interface information is available for Verilog design unit 'videoCapture'.
+ERROR: [IP_Flow 19-262] [HDL Parser] Failed to parse top module entity.  This can result from an empty entity or module declaration (i.e. no ports or parameters/generics).  Check that design unit "videoCapture" of HDL file "e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/video_capture.v" is not empty.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'video_capture.v'.
+WARNING: [IP_Flow 19-378] There are no ports found from top-level file 'e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/videoCapture/video_capture.v'.
+ERROR: [Common 17-39] 'ipx::infer_core' failed due to earlier errors.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP E:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v:]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rx_data_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_clk_n' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tx_clk_p' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'rx_data_clk': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'rx_data_clk': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_n': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_n': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_p': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_p': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'rx_data_clk': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'rx_data_clk': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_n': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_n': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tx_clk_p': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-4751] Bus Interface 'tx_clk_p': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.tmp e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/lvds.v:]
+ipx::current_core e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/lvds/component.xml
+update_compile_order -fileset sources_1
+close_project
+add_files -norecurse {E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Mar 17 16:26:03 2020] Launched synth_1...
+Run output will be captured here: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/runme.log
+write_verilog -mode synth_stub e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/ TCD1209D.v
+ERROR: [Common 17-165] Too many positional options when parsing 'TCD1209D.v', please type 'write_verilog -help' for usage info.
+set_property top TCD1209D [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Mar 17 16:33:30 2020] Launched synth_1...
+Run output will be captured here: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Mar 17 16:34:39 2020] Launched synth_1...
+Run output will be captured here: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2066.758 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clkin_p]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[3]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[2]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[3]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[2]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/MMCME2_BASE_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/MMCME2_BASE_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/IDELAYCTRL_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-180] No cells matched 'lvds_i/lvds_gen_rxclk_i/IDELAYCTRL_inst'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2066.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+write_verilog -mode synth_stub e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/ TCD1209D.v
+ERROR: [Common 17-165] Too many positional options when parsing 'TCD1209D.v', please type 'write_verilog -help' for usage info.
+write_verilog -mode synth_stub e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.v
+e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.v
+write_edif e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.edf
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2185.922 ; gain = 0.000
+e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.edf

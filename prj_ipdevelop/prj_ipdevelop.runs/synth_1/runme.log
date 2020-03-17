@@ -1,212 +1,56 @@
 
 *** Running vivado
-    with args -log lvds.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lvds.tcl
+    with args -log TCD1209D.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TCD1209D.tcl
 
 
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-INFO: [Common 17-748] XILINX_TCLAPP_REPO is set to 'D:/Xilinx/Vivado/2018.1/data/XilinxTclStore'. Refresh XilinxTclStore catalog is disabled when XILINX_TCLAPP_REPO is set.
-source lvds.tcl -notrace
-Command: synth_design -top lvds -part xc7z020clg400-1 -flatten_hierarchy full -mode out_of_context
+CRITICAL WARNING: [Common 17-1240] XILINX_TCLAPP_REPO is pointed to a location 'D:\Xilinx\Vivado\2018.1\data\XilinxTclStore' which does not exist or could not be read. The XilinxTclStore has been reverted to the installation area.
+source TCD1209D.tcl -notrace
+Command: synth_design -top TCD1209D -part xc7z020clg400-1 -flatten_hierarchy full -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18096 
+INFO: Helper process launched with PID 5168 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 417.395 ; gain = 97.637
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 878.879 ; gain = 243.391
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'lvds' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v:4]
-	Parameter GROUP bound to: group_0 - type: string 
-	Parameter DIFF_TERM bound to: FALSE - type: string 
-	Parameter CHANNEL_RX bound to: 1 - type: integer 
-	Parameter CHANNEL_TX bound to: 1 - type: integer 
-	Parameter IDELAY_OFFSET bound to: 2 - type: integer 
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'lvds_rx' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:1]
-	Parameter GROUP bound to: group_0 - type: string 
-	Parameter DIFF_TERM bound to: FALSE - type: string 
-	Parameter IDELAY_OFFSET bound to: 2 - type: integer 
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:13]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:14]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:15]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:16]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:17]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:32]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:33]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:34]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:36]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:37]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:38]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:39]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:40]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:43]
-INFO: [Synth 8-6157] synthesizing module 'IBUFDS_DIFF_OUT' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19541]
-	Parameter DIFF_TERM bound to: FALSE - type: string 
-	Parameter DQS_BIAS bound to: FALSE - type: string 
-	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
-	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_DIFF_OUT' (1#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19541]
-INFO: [Synth 8-6157] synthesizing module 'IDELAYE2' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:21522]
-	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
-	Parameter DELAY_SRC bound to: IDATAIN - type: string 
-	Parameter HIGH_PERFORMANCE_MODE bound to: FALSE - type: string 
-	Parameter IDELAY_TYPE bound to: VAR_LOAD - type: string 
-	Parameter IDELAY_VALUE bound to: 0 - type: integer 
-	Parameter IS_C_INVERTED bound to: 1'b0 
-	Parameter IS_DATAIN_INVERTED bound to: 1'b0 
-	Parameter IS_IDATAIN_INVERTED bound to: 1'b0 
-	Parameter PIPE_SEL bound to: FALSE - type: string 
-	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: float 
-	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
-	Parameter SIM_DELAY_D bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'IDELAYE2' (2#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:21522]
-INFO: [Synth 8-6157] synthesizing module 'lvds_iserdese' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_iserdese.v:2]
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter NUM_CE bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'ISERDESE2' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25012]
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
-	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
-	Parameter INIT_Q1 bound to: 1'b0 
-	Parameter INIT_Q2 bound to: 1'b0 
-	Parameter INIT_Q3 bound to: 1'b0 
-	Parameter INIT_Q4 bound to: 1'b0 
-	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
-	Parameter IOBDELAY bound to: IFD - type: string 
-	Parameter IS_CLKB_INVERTED bound to: 1'b0 
-	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
-	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
-	Parameter IS_CLK_INVERTED bound to: 1'b0 
-	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
-	Parameter IS_OCLK_INVERTED bound to: 1'b0 
-	Parameter NUM_CE bound to: 2 - type: integer 
-	Parameter OFB_USED bound to: FALSE - type: string 
-	Parameter SERDES_MODE bound to: MASTER - type: string 
-	Parameter SRVAL_Q1 bound to: 1'b0 
-	Parameter SRVAL_Q2 bound to: 1'b0 
-	Parameter SRVAL_Q3 bound to: 1'b0 
-	Parameter SRVAL_Q4 bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'ISERDESE2' (3#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25012]
-INFO: [Synth 8-6155] done synthesizing module 'lvds_iserdese' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_iserdese.v:2]
-INFO: [Synth 8-6157] synthesizing module 'bit_alignment' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v:2]
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'TCD1209D' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
+	Parameter D_WIDTH bound to: 8'b00001100 
+INFO: [Synth 8-6157] synthesizing module 'TCD1209D_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
+	Parameter STATUS_IDEL bound to: 2'b00 
+	Parameter STATUS_PREPARE bound to: 2'b01 
+	Parameter STATUS_LOAD bound to: 2'b10 
+	Parameter STATUS_TRAN bound to: 2'b11 
+	Parameter LINE_WIDTH bound to: 12'b100000110100 
+	Parameter LOAD_PLUS_WIDTH bound to: 10'b0100101100 
+	Parameter RS_PULSE_WIDTH bound to: 10'b0000001011 
+	Parameter CP_PULSE_WIDTH bound to: 10'b0000001011 
+INFO: [Synth 8-6155] done synthesizing module 'TCD1209D_driver' (1#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
+INFO: [Synth 8-6157] synthesizing module 'AD9945_cfg' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
+	Parameter STATUS_IDLE bound to: 1'b0 
+	Parameter STATUS_TRANS bound to: 1'b1 
+	Parameter TRANS_NUM bound to: 8'b00110011 
+INFO: [Synth 8-6155] done synthesizing module 'AD9945_cfg' (2#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
+INFO: [Synth 8-6157] synthesizing module 'AD9945_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:26]
+	Parameter D_WIDTH bound to: 8'b00001100 
+	Parameter SAMP_NUM bound to: 12'b100000101000 
+	Parameter RS_LOW_WIDTH bound to: 11 - type: integer 
+	Parameter RS_DLY_NUM bound to: 2 - type: integer 
+	Parameter F2_DLY_NUM bound to: 20 - type: integer 
 	Parameter STATE_IDLE bound to: 2'b00 
-	Parameter STATE_MATCH0 bound to: 2'b01 
-	Parameter STATE_MATCH1 bound to: 2'b10 
-	Parameter STATE_CONTINUE bound to: 3'b011 
-	Parameter TAP_NUMS bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'bit_alignment' (5#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/bit_alignment.v:2]
-INFO: [Synth 8-6157] synthesizing module 'lvds_bitslip' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v:1]
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter STATE_IDLE bound to: 2'b00 
-	Parameter STATE_COMPARE bound to: 2'b01 
-	Parameter STATE_WAITE bound to: 2'b10 
-	Parameter STATE_COMPELET bound to: 2'b11 
-WARNING: [Synth 8-6014] Unused sequential element data_in_dly_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v:36]
-INFO: [Synth 8-6155] done synthesizing module 'lvds_bitslip' (6#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_bitslip.v:1]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'bit_alignment_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:170]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_iserdese_slave'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:151]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'IDELAYE2_slave'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:128]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_iserdese_master'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:101]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'IDELAYE2_master'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:77]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'lvds_bitslip_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:187]
-INFO: [Synth 8-6155] done synthesizing module 'lvds_rx' (7#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_rx.v:1]
-INFO: [Synth 8-6157] synthesizing module 'lvds_tx' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_tx.v:1]
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'lvds_oserdese' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v:1]
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:31227]
-	Parameter DATA_RATE_OQ bound to: DDR - type: string 
-	Parameter DATA_RATE_TQ bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter INIT_OQ bound to: 1'b0 
-	Parameter INIT_TQ bound to: 1'b0 
-	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
-	Parameter IS_CLK_INVERTED bound to: 1'b0 
-	Parameter IS_D1_INVERTED bound to: 1'b0 
-	Parameter IS_D2_INVERTED bound to: 1'b0 
-	Parameter IS_D3_INVERTED bound to: 1'b0 
-	Parameter IS_D4_INVERTED bound to: 1'b0 
-	Parameter IS_D5_INVERTED bound to: 1'b0 
-	Parameter IS_D6_INVERTED bound to: 1'b0 
-	Parameter IS_D7_INVERTED bound to: 1'b0 
-	Parameter IS_D8_INVERTED bound to: 1'b0 
-	Parameter IS_T1_INVERTED bound to: 1'b0 
-	Parameter IS_T2_INVERTED bound to: 1'b0 
-	Parameter IS_T3_INVERTED bound to: 1'b0 
-	Parameter IS_T4_INVERTED bound to: 1'b0 
-	Parameter SERDES_MODE bound to: MASTER - type: string 
-	Parameter SRVAL_OQ bound to: 1'b0 
-	Parameter SRVAL_TQ bound to: 1'b0 
-	Parameter TBYTE_CTL bound to: FALSE - type: string 
-	Parameter TBYTE_SRC bound to: FALSE - type: string 
-	Parameter TRISTATE_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (8#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:31227]
-WARNING: [Synth 8-3848] Net SHIFTIN1 in module/entity lvds_oserdese does not have driver. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v:15]
-WARNING: [Synth 8-3848] Net SHIFTIN2 in module/entity lvds_oserdese does not have driver. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'lvds_oserdese' (9#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_oserdes.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'lvds_tx' (10#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_tx.v:1]
-INFO: [Synth 8-6157] synthesizing module 'lvds_gen_rxclk' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_gen_rxclk.v:3]
-	Parameter GROUP bound to: group_0 - type: string 
-	Parameter SERI_FACTOR bound to: 8 - type: integer 
-	Parameter PIXEL_CLOCK bound to: BUFG_BUFG - type: string 
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (11#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:21509]
-	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (12#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:21509]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25882]
-	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 2.000000 - type: float 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKIN1_PERIOD bound to: 2.245000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: float 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT1_DIVIDE bound to: 12 - type: integer 
-	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
-	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
-	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
-	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
-	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
-	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (13#1) [D:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25882]
-INFO: [Synth 8-6155] done synthesizing module 'lvds_gen_rxclk' (14#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds_gen_rxclk.v:3]
-WARNING: [Synth 8-3848] Net tx_clk_p in module/entity lvds does not have driver. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v:28]
-WARNING: [Synth 8-3848] Net tx_clk_n in module/entity lvds does not have driver. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v:29]
-INFO: [Synth 8-6155] done synthesizing module 'lvds' (15#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/LVDS/lvds.v:4]
-WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_p
-WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_n
+	Parameter STATE_SAMP bound to: 2'b10 
+	Parameter STATE_OUT bound to: 2'b11 
+	Parameter SHP_DLY_NUM bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'AD9945_driver' (3#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'TCD1209D' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.313 ; gain = 151.555
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 952.418 ; gain = 316.930
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -219,14 +63,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.313 ; gain = 151.555
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 952.418 ; gain = 316.930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 471.313 ; gain = 151.555
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 952.418 ; gain = 316.930
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 952.418 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -235,6 +77,18 @@ Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdev
 WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
 CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clkin_p]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -246,6 +100,9 @@ CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
@@ -259,64 +116,75 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-507] No nets matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lvds_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/lvds_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TCD1209D_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TCD1209D_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1049.270 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 3 instances were transformed.
-  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 2 instances
-  MMCME2_BASE => MMCME2_ADV: 1 instances
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 832.352 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1054.324 ; gain = 5.055
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bit_alignment'
-INFO: [Synth 8-5544] ROM "align_done_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lvds_bitslip'
-INFO: [Synth 8-5544] ROM "bitslip_done_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'status_reg' in module 'TCD1209D_driver'
+INFO: [Synth 8-5546] ROM "sl_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'AD9945_driver'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-              STATE_IDLE |                               00 |                               00
-            STATE_MATCH0 |                               01 |                               01
-            STATE_MATCH1 |                               10 |                               10
-          STATE_CONTINUE |                               11 |                               11
+             STATUS_IDEL |                              001 |                               00
+             STATUS_LOAD |                              010 |                               10
+             STATUS_TRAN |                              100 |                               11
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bit_alignment'
+INFO: [Synth 8-3354] encoded FSM with state register 'status_reg' using encoding 'one-hot' in module 'TCD1209D_driver'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-              STATE_IDLE |                               00 |                               00
-           STATE_COMPARE |                               01 |                               01
-          STATE_COMPELET |                               10 |                               11
-             STATE_WAITE |                               11 |                               10
+              STATE_IDLE |                                0 |                               00
+              STATE_SAMP |                                1 |                               10
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'lvds_bitslip'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'AD9945_driver'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 832.352 ; gain = 512.594
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,22 +197,28 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      6 Bit       Adders := 3     
-	   2 Input      5 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	                6 Bit    Registers := 3     
-	                5 Bit    Registers := 3     
-	                3 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 15    
 +---Muxes : 
-	   4 Input      5 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 9     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   3 Input     10 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 7     
+	   6 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -352,39 +226,45 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module bit_alignment 
+Module TCD1209D_driver 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 2     
 +---Registers : 
-	                6 Bit    Registers := 3     
-	                5 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   3 Input     10 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 8     
+Module AD9945_cfg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 2     
+Module AD9945_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	   4 Input      5 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
-Module lvds_bitslip 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 5     
-Module lvds_rx 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      5 Bit       Adders := 1     
-+---Registers : 
-	                5 Bit    Registers := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -401,10 +281,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_p
-WARNING: [Synth 8-3331] design lvds has unconnected port tx_clk_n
+INFO: [Synth 8-5587] ROM size for "AD9945_cfg_I/sl_reg" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-3917] design TCD1209D has port PBLK driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 832.352 ; gain = 512.594
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -416,13 +296,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 837.285 ; gain = 517.527
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 837.359 ; gain = 517.602
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1054.324 ; gain = 418.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,7 +314,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 856.418 ; gain = 536.660
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1058.219 ; gain = 422.730
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -458,8 +338,20 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1065.008 ; gain = 429.520
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1065.008 ; gain = 429.520
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
@@ -468,22 +360,25 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1065.008 ; gain = 429.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|TCD1209D    | AD9945_driver_i/shd_reg_reg    | 13     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|TCD1209D    | AD9945_driver_i/f2_dly_reg[19] | 19     | 1     | NO           | NO                 | YES               | 0      | 1       | 
++------------+--------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -496,59 +391,51 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+----------------+------+
-|      |Cell            |Count |
-+------+----------------+------+
-|1     |BUFG            |     3|
-|2     |CARRY4          |     2|
-|3     |IDELAYCTRL      |     1|
-|4     |IDELAYE2        |     2|
-|5     |ISERDESE2       |     2|
-|6     |LUT1            |     8|
-|7     |LUT2            |    16|
-|8     |LUT3            |     4|
-|9     |LUT4            |    14|
-|10    |LUT5            |     7|
-|11    |LUT6            |     8|
-|12    |MMCME2_BASE     |     1|
-|13    |OSERDESE2       |     1|
-|14    |FDRE            |    46|
-|15    |IBUFDS_DIFF_OUT |     2|
-+------+----------------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     8|
+|2     |LUT1    |     7|
+|3     |LUT2    |    22|
+|4     |LUT3    |     7|
+|5     |LUT4    |    11|
+|6     |LUT5    |    17|
+|7     |LUT6    |    42|
+|8     |SRL16E  |     1|
+|9     |SRLC32E |     1|
+|10    |FDRE    |    95|
+|11    |FDSE    |     2|
++------+--------+------+
 
 Report Instance Areas: 
-+------+-------------------------+-----------------+------+
-|      |Instance                 |Module           |Cells |
-+------+-------------------------+-----------------+------+
-|1     |top                      |                 |   117|
-|2     |  \LVDS_RX[0].lvds_rx_i  |lvds_rx          |   108|
-|3     |    lvds_iserdese_master |lvds_iserdese__1 |     2|
-|4     |    lvds_iserdese_slave  |lvds_iserdese    |     2|
-|5     |    bit_alignment_i      |bit_alignment    |    67|
-|6     |    lvds_bitslip_i       |lvds_bitslip     |    20|
-+------+-------------------------+-----------------+------+
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   213|
++------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1065.008 ; gain = 429.520
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 856.418 ; gain = 175.621
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 856.418 ; gain = 536.660
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1065.008 ; gain = 327.613
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1065.008 ; gain = 429.520
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1065.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1075.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 3 instances were transformed.
-  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 2 instances
-  MMCME2_BASE => MMCME2_ADV: 1 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 19 Warnings, 10 Critical Warnings and 0 Errors encountered.
+26 Infos, 23 Warnings, 21 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 862.238 ; gain = 555.488
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/lvds.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file lvds_utilization_synth.rpt -pb lvds_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 862.238 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 20 15:50:44 2019...
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1075.500 ; gain = 766.406
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1075.500 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/TCD1209D.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TCD1209D_utilization_synth.rpt -pb TCD1209D_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 16:35:24 2020...

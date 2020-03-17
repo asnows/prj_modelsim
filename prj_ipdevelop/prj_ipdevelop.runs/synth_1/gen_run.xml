@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1576828204">
-  <File Type="PA-TCL" Name="lvds.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="lvds_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="lvds_reports.tcl"/>
-  <File Type="RDS-RDS" Name="lvds.vds"/>
-  <File Type="RDS-UTIL" Name="lvds_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="lvds_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="lvds.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="lvds_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="lvds_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1584434079">
+  <File Type="PA-TCL" Name="TCD1209D.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="TCD1209D_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="TCD1209D_reports.tcl"/>
+  <File Type="RDS-RDS" Name="TCD1209D.vds"/>
+  <File Type="RDS-UTIL" Name="TCD1209D_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="TCD1209D_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="TCD1209D.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="TCD1209D_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="TCD1209D_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../prj_modelsim/src/CCD/TCD1290D/TCD1209D.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../prj_modelsim/src/imgProcess/video_caputure.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/bit_alignment.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,6 +57,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds_bitslip.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -27,6 +65,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds_gen_rxclk.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,6 +73,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds_iserdese.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,6 +81,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds_oserdes.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -48,6 +89,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds_rx.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -55,6 +97,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds_tx.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -62,6 +105,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/LVDS/lvds.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -79,7 +123,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="lvds"/>
+      <Option Name="TopModule" Val="TCD1209D"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -95,6 +139,12 @@
     <Config>
       <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/top.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">

@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Dec 20 15:50:08 2019
-# Process ID: 9472
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Mar 17 16:34:42 2020
+# Process ID: 10376
 # Current directory: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1
-# Command line: vivado.exe -log lvds.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lvds.tcl
-# Log file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/lvds.vds
+# Command line: vivado.exe -log TCD1209D.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TCD1209D.tcl
+# Log file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/TCD1209D.vds
 # Journal file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source lvds.tcl -notrace
+source TCD1209D.tcl -notrace
