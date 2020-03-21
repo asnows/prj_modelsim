@@ -137,20 +137,49 @@ module top_tb
 
 // );
 
+wire sh,f1;
+reg sh_dly,f1_dly;
+reg[11:0] data;
+
+always@(posedge clk_100m)
+begin
+	f1_dly <= f1;
+	sh_dly <= sh;
+end
+
+always@(posedge clk_100m)
+begin
+	if(~sh_dly & sh)
+	begin
+		data <= 12'd0;
+	end
+	else
+	begin
+		if(~f1_dly & f1)
+		begin
+			data <= data + 1'b1;
+		end
+		
+	end
+	
+	
+end
+
+
 
 TCD1209D
 #(
-	.D_WIDTH(8)
+	.D_WIDTH(12)
 )
 TCD1209D_i
 (
 // TCD1290D_driver
 .sys_clk(clk_100m),
-.f1_cnt(50),
-.sh(),
-.f1(),
+.f_cnt(2102),
+.sh(sh),
+.f1(f1),
 .f2(),
-.f2b(),
+//.f2b(),
 .rs(),
 .cp(),
 
@@ -170,9 +199,15 @@ TCD1209D_i
 .DATACLK		(),
 .CLPOB		(),
 .PBLK		(),
-.DATA_IN(55),
-.tdata(),
-.tvalid()
+.DATA_IN(data),
+//ccd2axis
+.rows(3), // 行数
+.m_axis_tdata (),
+.m_axis_tlast (),
+.m_axis_tuser (),
+.m_axis_tvalid(),
+.m_axis_tready()   
+
 
 );
 

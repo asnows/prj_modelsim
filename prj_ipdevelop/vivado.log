@@ -376,3 +376,5 @@ e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.v
 write_edif e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.edf
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2185.922 ; gain = 0.000
 e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.edf
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 17:37:31 2020...
