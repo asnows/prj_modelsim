@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,6 +32,7 @@ read_verilog -library xil_defaultlib {
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v
+  E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -46,7 +46,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc
 set_property used_in_implementation false [get_files E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
 
-set_param ips.enableIPCacheLiteLoad 1
+set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
 synth_design -top TCD1209D -part xc7z020clg400-1 -flatten_hierarchy full -mode out_of_context

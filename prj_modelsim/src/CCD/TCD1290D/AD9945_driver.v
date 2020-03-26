@@ -1,23 +1,23 @@
 /*
-æ¨¡å—åï¼š
+Ä£¿éÃû£º
 	AD9945_driver
-åŠŸèƒ½ï¼š
-	AD9945é©±åŠ¨æ¨¡å—
-å‚æ•°:
-	sys_clk 	: ç³»ç»Ÿè¾“å…¥æ—¶é’Ÿï¼Œé»˜è®¤100mï¼Œä¸CCDé©±åŠ¨æ¨¡å—çš„sys_clkç›¸ç­‰ï¼›
-	rs_plus		: CCD å¤ä½è„‰å†²ï¼›
-	pclk		: CCD åƒç´ æ—¶é’Ÿï¼›
-	SHP			: ADé‡‡æ ·å‚è€ƒæ—¶é’Ÿï¼›
-	SHD			: ADé‡‡æ ·æ—¶é’Ÿï¼›
-	DATACLK		: æ•°æ®é‡‡æ ·æ—¶é’Ÿ;
-	DATA_IN		ï¼šè¾“å…¥æ•°æ®ï¼›
-	tdata		: è¾“å‡ºæ•°æ®ï¼›
-	tvalid		ï¼šæ•°æ®æœ‰æ•ˆè„‰å†²
+¹¦ÄÜ£º
+	AD9945Çı¶¯Ä£¿é
+²ÎÊı:
+	sys_clk 	: ÏµÍ³ÊäÈëÊ±ÖÓ£¬Ä¬ÈÏ100m£¬ÓëCCDÇı¶¯Ä£¿éµÄsys_clkÏàµÈ£»
+	rs_plus		: CCD ¸´Î»Âö³å£»
+	pclk		: CCD ÏñËØÊ±ÖÓ£»
+	SHP			: AD²ÉÑù²Î¿¼Ê±ÖÓ£»
+	SHD			: AD²ÉÑùÊ±ÖÓ£»
+	DATACLK		: Êı¾İ²ÉÑùÊ±ÖÓ;
+	DATA_IN		£ºÊäÈëÊı¾İ£»
+	tdata		: Êä³öÊı¾İ£»
+	tvalid		£ºÊı¾İÓĞĞ§Âö³å
 	
-è®¾è®¡åŸç†ï¼š
-	SHP ç”±rså¤ä½è„‰å†²å»¶æ—¶RS_DLY_NUM ä¸ªsys_clkè„‰å†²åå´åç”Ÿæˆã€‚
-	SHD ç”±SHPå»¶æ—¶SHP_DLY_NUMè„‰å†²åç”Ÿæˆã€‚
-	DATACLK ç”±pclkå–åç”Ÿæˆ,å³ç­‰äºf2ã€‚
+Éè¼ÆÔ­Àí£º
+	SHP ÓÉrs¸´Î»Âö³åÑÓÊ±1¸ösys_clkÂö³åºóÈ´·´Éú³É¡£
+	SHD ÓÉpclk ÏÂ½µÑØÂö³åÈ¡·´ºóÉú³É¡£
+	DATACLK ÓÉpclkÈ¡·´Éú³É,¼´µÈÓÚf2¡£
 */
 
 module AD9945_driver
@@ -32,9 +32,9 @@ output    	SHD			,
 output    	DATACLK		,
 output		CLPOB		,
 output		PBLK		,
-input[11:0] DATA_IN,
+input[11:0] DATA_IN		,
 
-output[11:0] tdata,
+output[11:0] tdata		,
 output		 tvalid
 
 );
@@ -43,10 +43,10 @@ output		 tvalid
 	
 	
 	
-	localparam SAMP_NUM = 12'd2088; // ä¸€å¸§é‡‡æ ·æ•°
-	localparam RS_LOW_WIDTH = 2;  //rsä½è„‰å†²å®½åº¦, å•ä½10ns
-	localparam RS_DLY_NUM   = 2;  // shp ç›¸å¯¹äºccd rs çš„å»¶æ—¶é‡ï¼Œå•ä½10ns (sys_clk = 10ns)
-    localparam SHP_DLY_NUM  = 8;  // shd ç›¸å¯¹äºshp çš„å»¶æ—¶é‡ï¼Œ å•ä½10ns
+	localparam SAMP_NUM = 12'd2088; // Ò»Ö¡²ÉÑùÊı
+	localparam RS_LOW_WIDTH = 2;  //rsµÍÂö³å¿í¶È, µ¥Î»10ns
+	localparam RS_DLY_NUM   = 2;  // shp Ïà¶ÔÓÚccd rs µÄÑÓÊ±Á¿£¬µ¥Î»10ns (sys_clk = 10ns)
+    localparam SHP_DLY_NUM  = 8;  // shd Ïà¶ÔÓÚshp µÄÑÓÊ±Á¿£¬ µ¥Î»10ns
 
 
  
@@ -58,9 +58,6 @@ output		 tvalid
 	reg tvalid_reg;
 	reg clpob_reg;
 
-
-	reg[RS_DLY_NUM - 1:0] rs_dly;
-	reg[SHP_DLY_NUM - 1:0] shp_dly;
 	reg[10:0] os_tvalid_dly;
 	reg[11:0] tdata_reg;
 
@@ -68,11 +65,12 @@ output		 tvalid
 
 	reg[7:0] clk_cnt = 8'd0;
 	reg[11:0] samp_cnt = 12'd0;
+	reg pclk_dly;
 	
 	
-	assign SHP = shp_reg;
-	assign SHD = shd_reg;
-	assign DATACLK = ~pclk;
+	assign SHP = ~shp_reg;
+	assign SHD = ~shd_reg;
+	assign DATACLK = pclk;
 	assign tvalid = os_tvalid_dly[10];
 	assign tdata = tdata_reg;
 	assign CLPOB = clpob_reg;
@@ -81,28 +79,26 @@ output		 tvalid
 
 	always@(posedge sys_clk)
 	begin
-		
-		rs_dly <= {rs_dly[RS_DLY_NUM - 2:0],rs_plus};
+		pclk_dly <= pclk;
 		
 	end
 
 
-	//ç”Ÿæˆ SHP
+	//Éú³É SHP
 	always@(posedge sys_clk)
 	begin
-		shp_reg <= ~rs_dly[RS_DLY_NUM - 1];// rs å»¶æ—¶10ns
-		shp_dly<= {shp_dly[SHP_DLY_NUM - 2:0],shp_reg};
+		shp_reg <= rs_plus;
 	end
 
-	//ç”Ÿæˆ SHD
+	//Éú³É SHD
 	always@(posedge sys_clk)
 	begin
-		shd_reg <= shp_dly[SHP_DLY_NUM - 1];			
+		shd_reg	<= pclk_dly & (~pclk);
 	end
 
 	
 	
-	//samp_cnt è®¡ç®—
+	//samp_cnt ¼ÆËã
 	always@(posedge DATACLK)
 	begin
 		if(os_tvalid)
@@ -115,7 +111,7 @@ output		 tvalid
 		end
 	end
 
-	//ç”ŸæˆCLPOB
+	//Éú³ÉCLPOB
 	always@(posedge DATACLK)
 	begin
 		if((12'd13 < samp_cnt) && (samp_cnt < 12'd24))// 14 ~23 10pixels
@@ -128,7 +124,7 @@ output		 tvalid
 		end
 	end
 
-	//ç”Ÿæˆtvalid
+	//Éú³Étvalid
 	always@(posedge DATACLK)
 	begin
 		os_tvalid_dly <= {os_tvalid_dly[9:0],os_tvalid};

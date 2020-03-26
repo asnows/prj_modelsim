@@ -5,8 +5,9 @@
 	CCD时序驱动
 参数:
 	sys_clk :系统输入时钟，默认100m；
+	f1_freq :时钟频率设置， f1时钟频率 = sys_clk/f1_freq，必须是2的整数倍，建议最大值 = 16（f1频率 =6.25 = 100/16）  
 	sh      :转移栅脉冲；
-	f_cnt   :行频设置 f_cnt = 1000000000(ns)/（行频 x 160）, 最大值为8388608（行频 = 1行），最小值为2102（行频 = 2973）
+	f_cnt   :行频设置 f_cnt = 1000000000(ns)/（行频 x 160）, 最大值为6250000（行频 = 1行），最小值为2102（行频 = 2973）
 	f1		:二相移位脉冲1；
 	f2		:二相移位脉冲2，原理图上已实现f2b = f2；
 	rs		:输出极复位脉冲;
@@ -25,11 +26,11 @@
 module TCD1209D_driver
 (
 input  sys_clk,
+input[7:0]f1_freq,
 input[22:0]f_cnt, 
 output sh,
 output f1,
 output f2,
-output f2b,
 output rs,
 output cp,
 output pclk,
@@ -48,7 +49,7 @@ reg rs_reg;
 
 reg[22:0] wait_cnt = 23'd0;
 reg[22:0] pxl_cnt = 23'd0;
-reg[3:0]clk_div = 4'd0;
+reg[7:0]clk_div = 8'd0;
 reg pxl_clk_reg;
 reg rs_clk_reg;
 reg cp_clk_reg;
@@ -57,17 +58,19 @@ wire f1_tmp;
 reg tvalid_reg;
 
 
+
 assign pxl_clk = pxl_clk_reg;
 assign f1_tmp  = (pxl_clk | f1_reg);
 
 assign sh = sh_reg;
-assign f1 = f1_tmp;
-assign f2 = ~f1_tmp;
+assign f1 = ~f1_tmp;
+assign f2 = f1_tmp;
 assign rs = rs_reg & rs_clk_reg;
 assign cp = rs_reg & cp_clk_reg;
 assign pclk = pxl_clk;
 assign rs_plus = rs_clk_reg;
 assign os_tvalid = tvalid_reg;
+
 
 always@(posedge sys_clk)
 begin
@@ -87,57 +90,55 @@ end
 
 always@(posedge sys_clk)
 begin
-	if(clk_div < 15)// 时钟计算
+	//if(clk_div < 15)// 时钟计算
+	if(clk_div < (f1_freq - 1))// 时钟计算
 	begin
 		clk_div <= clk_div + 1;
 	end
 	else
 	begin
-		clk_div <= 4'd0;
+		clk_div <= 8'd0;
 	end	
 end
 
+always@(posedge sys_clk)
+begin
+	if(clk_div < ((f1_freq/2) -1))
+	begin
+		pxl_clk_reg <= 1'b1;
+	end
+	else
+	begin
+		pxl_clk_reg <= 1'b0;
+	end
+end
 
 
 always@(posedge sys_clk)
 begin
 	case(clk_div)
-		4'd0,4'd1,4'd2,4'd3,4'd4,4'd5,4'd6,4'd7:
+		8'd0,8'd1:
 		begin
-			pxl_clk_reg <= 1'b1;
-			rs_clk_reg  <= 1'b0;
-			cp_clk_reg  <= 1'b0;
-		end		
-		4'd8,4'd9:
-		begin
-			pxl_clk_reg <= 1'b0;
-			rs_clk_reg  <= 1'b1;
-			cp_clk_reg  <= 1'b0;
-		end
-		4'd10,4'd11:
-		begin
-			pxl_clk_reg <= 1'b0;
-			rs_clk_reg  <= 1'b0;
-			cp_clk_reg  <= 1'b1;
-		end
-
-		4'd12,4'd13,4'd14,4'd15:
-		begin
-			pxl_clk_reg <= 1'b0;
-			rs_clk_reg  <= 1'b0;
-			cp_clk_reg  <= 1'b0;
+			rs_clk_reg <= 1'b1;
+			cp_clk_reg <= 1'b0;
 		end
 		
+		8'd2,8'd3:
+		begin
+			rs_clk_reg <= 1'b0;
+			cp_clk_reg <= 1'b1;
+			
+		end
 		default:
 		begin
-			pxl_clk_reg <= 1'b0;
-			rs_clk_reg  <= 1'b0;
-			cp_clk_reg  <= 1'b0;				
+			rs_clk_reg <= 1'b0;
+			cp_clk_reg <= 1'b0;
 		end
 		
 		
 	endcase
 end
+
 
 
 

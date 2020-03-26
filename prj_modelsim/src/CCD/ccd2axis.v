@@ -24,12 +24,12 @@
         input            m_axis_tready   
     );
 		localparam STATE_IDEL = 2'd0,STATE_PRE_DUMMY = 2'd1,STATE_EFFECT = 2'd2,STATE_POST_DUMMMY = 2'd3;
-		reg[1:0]   state = STATE_IDEL;
+		(*mark_debug="true"*)reg[1:0]   state = STATE_IDEL;
 		
-        reg[11:0]     rows_count = 12'd0;
-		reg[12:0]     cols_count = 13'd0;
+        (*mark_debug="true"*)reg[11:0]     rows_count = 12'd0;
+		(*mark_debug="true"*)reg[12:0]     cols_count = 13'd0;
 		reg sh_dly;
-		reg tvalid_dly;
+		(*mark_debug="true"*)reg tvalid_dly;
 		reg tuser_reg;
 		reg tlast_reg;
 		reg tvalid_reg;

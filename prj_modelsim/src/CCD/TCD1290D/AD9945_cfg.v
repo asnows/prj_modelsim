@@ -4,7 +4,7 @@
 功能：
 	AD9945 配置模块
 参数:
-	sys_clk 	: 系统输入时钟，最大50mhz,典型用20或者25m；
+	sys_clk 	: 系统输入时钟，典型100m，用于分频产生sck = sys_clk/16 = 6.25m；
 	Oper		: Operation 操作寄存器；
 	Ctrl		: Control 控制寄存器;
 	Clamp		: ClampLevel 黑电平钳位寄存器；
@@ -45,16 +45,25 @@ reg 	 cfg_en_dly	 ;
 
 reg[7:0] data_cnt = 8'd0;
 
-wire		sck_div;
+wire		sck_clk;
 reg 		sdata_reg = 1'b1;
 reg 		sl_reg   = 1'b1;
 
+reg[7:0]	div_cnt = 8'd0;
+
 
 assign SDATA =  sdata_reg;
-assign SCK   = (sl_reg == 1'b0 )? ~sys_clk : 1'b0;
+assign SCK   = sck_clk;//sl_reg == 1'b0 )? sck_clk : 1'b0;
 assign SL    = sl_reg;
+assign sck_clk = div_cnt[3];
 
 always@(posedge sys_clk)
+begin
+	div_cnt <= div_cnt + 1'b1;
+end
+
+
+always@(posedge sck_clk)
 begin
 	Oper_dly	  <=Oper	;	
 	Ctrl_dly	  <=Ctrl	;	
@@ -64,7 +73,7 @@ begin
 end
 
 
-always@(posedge sys_clk)
+always@(posedge sck_clk)
 begin
 	if((~cfg_en_dly) & cfg_en)
 	begin
@@ -81,7 +90,7 @@ begin
 end
 
 
-always@(posedge sys_clk)
+always@(posedge sck_clk)
 begin
 	case(status)
 		STATUS_IDLE:
@@ -99,7 +108,7 @@ end
 
 
 
-always@(posedge sys_clk)
+always@(negedge sck_clk)
 begin
 	if(status == STATUS_TRANS)
 	begin
