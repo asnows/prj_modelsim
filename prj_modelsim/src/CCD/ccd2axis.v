@@ -1,8 +1,13 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
+/*
+模块名：
+	ccd2axis
+功能：
+	把CCD输出的图像数据转成axis协议格式
+参数：
+	rows：每帧图像的行数，
 
-//////////////////////////////////////////////////////////////////////////////////
-
+*/
 
     module ccd2axis 
     #(
@@ -13,15 +18,15 @@
     )
     (
 
-        input   pixel_clk     ,
-        input   tvalid  	  ,
-        input[DATA_WIDTH-1 : 0] tdata,
-		input[10:0] rows, // 行数
-        output[DATA_WIDTH - 1 : 0 ] m_axis_tdata ,
-        output           m_axis_tlast ,
-        output           m_axis_tuser ,
-        output           m_axis_tvalid,
-        input            m_axis_tready   
+        (*mark_debug="true"*)input   pixel_clk     ,
+        (*mark_debug="true"*)input   tvalid  	  ,
+        (*mark_debug="true"*)input[DATA_WIDTH-1 : 0] tdata,
+		(*mark_debug="true"*)input[10:0] rows, // 行数 必须是15的倍数，方便组成3840的大小
+        (*mark_debug="true"*)output[DATA_WIDTH - 1 : 0 ] m_axis_tdata ,
+        (*mark_debug="true"*)output           m_axis_tlast ,
+        (*mark_debug="true"*)output           m_axis_tuser ,
+        (*mark_debug="true"*)output           m_axis_tvalid,
+        (*mark_debug="true"*)input            m_axis_tready   
     );
 		localparam STATE_IDEL = 2'd0,STATE_PRE_DUMMY = 2'd1,STATE_EFFECT = 2'd2,STATE_POST_DUMMMY = 2'd3;
 		(*mark_debug="true"*)reg[1:0]   state = STATE_IDEL;
@@ -33,7 +38,7 @@
 		reg tuser_reg;
 		reg tlast_reg;
 		reg tvalid_reg;
-		reg[DATA_WIDTH-1 : 0] tdata_reg,tdata_reg1;
+		(*mark_debug="true"*)reg[DATA_WIDTH-1 : 0] tdata_reg,tdata_reg1;
 		
         assign m_axis_tdata = tdata_reg; 
         assign m_axis_tlast = tlast_reg; 
@@ -43,10 +48,13 @@
 		always@(posedge pixel_clk)
 		begin
 			tvalid_dly <= tvalid;
-			tdata_reg1  <= tdata;
-			tdata_reg <= tdata_reg1;
 		end
-
+		
+		always@(posedge pixel_clk)
+		begin
+			tdata_reg1 <= tdata;
+			tdata_reg  <= tdata_reg1;
+		end
 
 		always@(posedge pixel_clk)
 		begin
@@ -117,7 +125,6 @@
 				end									
 			endcase
 		end
-		
 		
 		
 		//tvalid 

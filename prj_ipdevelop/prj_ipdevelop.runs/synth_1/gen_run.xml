@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1585119007">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1585299105">
   <File Type="PA-TCL" Name="TCD1209D.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="TCD1209D_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="TCD1209D_reports.tcl"/>
@@ -41,6 +41,14 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/CCD/TCD1290D/TCD1209D.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../prj_modelsim/src/imgProcess/rows_resize.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

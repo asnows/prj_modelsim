@@ -54,12 +54,13 @@ reg pxl_clk_reg;
 reg rs_clk_reg;
 reg cp_clk_reg;
 wire pxl_clk;
+wire pxl_tmp;
 wire f1_tmp;
 reg tvalid_reg;
 
 
 
-assign pxl_clk = pxl_clk_reg;
+
 assign f1_tmp  = (pxl_clk | f1_reg);
 
 assign sh = sh_reg;
@@ -70,6 +71,16 @@ assign cp = rs_reg & cp_clk_reg;
 assign pclk = pxl_clk;
 assign rs_plus = rs_clk_reg;
 assign os_tvalid = tvalid_reg;
+
+//BUFG:GlobalClockSimpleBuffer
+//7Series
+//XilinxHDLLibrariesGuide,version2016.3
+BUFG BUFG_inst
+(
+.O(pxl_clk),//1-bitoutput:Clockoutput
+.I(pxl_clk_reg)//1-bitinput:Clockinput
+);
+
 
 
 always@(posedge sys_clk)

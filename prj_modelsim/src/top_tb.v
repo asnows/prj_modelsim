@@ -166,6 +166,15 @@ begin
 end
 
 
+wire data_clk;
+wire[7 : 0 ]   m_axis_tdata ;
+wire           m_axis_tlast ;
+wire           m_axis_tuser ;
+wire           m_axis_tvalid;
+wire           m_axis_tready;
+wire           m_axis_aclk  ;
+
+
 
 TCD1209D
 #(
@@ -202,14 +211,37 @@ TCD1209D_i
 .PBLK		(),
 .DATA_IN(data),
 //ccd2axis
-.rows(3), // 行数
-.m_axis_tdata (),
-.m_axis_tlast (),
-.m_axis_tuser (),
-.m_axis_tvalid(),
-.m_axis_tready()   
-
+.rows(15), // 行数
+.m_axis_tdata (m_axis_tdata ),
+.m_axis_tlast (m_axis_tlast ),
+.m_axis_tuser (m_axis_tuser ),
+.m_axis_tvalid(m_axis_tvalid),
+.m_axis_tready(m_axis_tready),   
+.m_axis_aclk  (m_axis_aclk	)
 
 );
+
+
+  rows_resize
+    #(
+        .DATA_WIDTH(8)
+    )
+	rows_resize_I
+    (
+		
+        .pixel_clk(m_axis_aclk)       ,
+		.rows_size   	(3840),
+        .s_axis_tdata    (m_axis_tdata ),
+        .s_axis_tlast    (m_axis_tlast ),
+        .s_axis_tuser    (m_axis_tuser ),
+        .s_axis_tvalid   (m_axis_tvalid),
+        
+        .m_axis_tlast   (),
+        .m_axis_tuser   (),
+        .m_axis_tvalid  (),
+        .m_axis_tdata   ()
+    
+     );
+
 
 endmodule

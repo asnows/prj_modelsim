@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Mar 25 14:54:44 2020
+// Date        : Fri Mar 27 16:36:45 2020
 // Host        : VT2OB6D7ZB52FZ0 running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode synth_stub e:/WorkSpace/project/FPGA/prj_modelsim/ip_repo/TCD1209D/TCD1209D.v -force
 // Design      : TCD1209D

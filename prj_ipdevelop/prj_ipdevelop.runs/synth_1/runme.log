@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7476 
+INFO: Helper process launched with PID 12112 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 413.066 ; gain = 97.203
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 381.910 ; gain = 99.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'TCD1209D' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
 	Parameter D_WIDTH bound to: 8'b00001100 
@@ -52,21 +52,23 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:51]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:52]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:53]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:55]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:56]
 INFO: [Synth 8-6157] synthesizing module 'TCD1209D_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
 	Parameter STATUS_IDEL bound to: 2'b00 
 	Parameter STATUS_LOAD bound to: 2'b01 
 	Parameter STATUS_TRAN bound to: 2'b10 
 	Parameter STATUS_WAIT bound to: 2'b11 
 	Parameter LINE_WIDTH bound to: 12'b100000101000 
-INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:164]
-WARNING: [Synth 8-3848] Net f2b in module/entity TCD1209D_driver does not have driver. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'TCD1209D_driver' (1#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
-WARNING: [Synth 8-350] instance 'TCD1209D_driver_I' of module 'TCD1209D_driver' requires 12 connections, but only 11 given [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:65]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:159]
+INFO: [Synth 8-6155] done synthesizing module 'TCD1209D_driver' (2#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
 INFO: [Synth 8-6157] synthesizing module 'AD9945_cfg' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
 	Parameter STATUS_IDLE bound to: 1'b0 
 	Parameter STATUS_TRANS bound to: 1'b1 
 	Parameter TRANS_NUM bound to: 8'b00110011 
-INFO: [Synth 8-6155] done synthesizing module 'AD9945_cfg' (2#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'AD9945_cfg' (3#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
 INFO: [Synth 8-6157] synthesizing module 'AD9945_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:23]
 	Parameter STATE_IDLE bound to: 2'b00 
 	Parameter STATE_SAMP bound to: 2'b10 
@@ -75,8 +77,8 @@ INFO: [Synth 8-6157] synthesizing module 'AD9945_driver' [E:/WorkSpace/project/F
 	Parameter RS_LOW_WIDTH bound to: 2 - type: integer 
 	Parameter RS_DLY_NUM bound to: 2 - type: integer 
 	Parameter SHP_DLY_NUM bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AD9945_driver' (3#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ccd2axis' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'AD9945_driver' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ccd2axis' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:12]
 	Parameter DATA_WIDTH bound to: 8'b00001100 
 	Parameter EFFECT_COLS bound to: 12'b100000000000 
 	Parameter PRE_DUMMY_COLS bound to: 8'b00100000 
@@ -85,21 +87,28 @@ INFO: [Synth 8-6157] synthesizing module 'ccd2axis' [E:/WorkSpace/project/FPGA/p
 	Parameter STATE_PRE_DUMMY bound to: 2'b01 
 	Parameter STATE_EFFECT bound to: 2'b10 
 	Parameter STATE_POST_DUMMMY bound to: 2'b11 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:21]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:22]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:23]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:24]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:25]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:26]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:27]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:28]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:29]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:30]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:32]
-INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'ccd2axis' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:7]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TCD1209D_driver_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:65]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_cfg_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:81]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_driver_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:95]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ccd2axis_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:119]
-INFO: [Synth 8-6155] done synthesizing module 'TCD1209D' (5#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
-WARNING: [Synth 8-3331] design ccd2axis has unconnected port m_axis_tready
-WARNING: [Synth 8-3331] design TCD1209D_driver has unconnected port f2b
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:34]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:35]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:37]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:41]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'ccd2axis' (5#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TCD1209D_driver_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:69]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_cfg_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:85]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_driver_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'TCD1209D' (6#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 467.695 ; gain = 151.832
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.668 ; gain = 154.004
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -112,10 +121,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 467.695 ; gain = 151.832
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.668 ; gain = 154.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 467.695 ; gain = 151.832
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.668 ; gain = 154.004
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -123,94 +132,29 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clkin_p]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:2]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:4]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:5]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:6]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:9]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[3]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[2]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[3]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[2]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[1]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'datain_p[0]'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'dataout_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'tx_clkdiv'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'reset'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'clrl_refclk'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'clkin_p'. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TCD1209D_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/TCD1209D_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 841.383 ; gain = 1.113
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 801.023 ; gain = 1.102
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 841.383 ; gain = 525.520
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 841.383 ; gain = 525.520
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 841.383 ; gain = 525.520
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'status_reg' in module 'TCD1209D_driver'
 INFO: [Synth 8-5546] ROM "rs_clk_reg" won't be mapped to RAM because it is too sparse
@@ -241,7 +185,7 @@ INFO: [Synth 8-5546] ROM "tlast_reg" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-3354] encoded FSM with state register 'status_reg' using encoding 'sequential' in module 'TCD1209D_driver'
 INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'ccd2axis', re-encoding will not be performed
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 841.383 ; gain = 525.520
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -264,13 +208,12 @@ Detailed RTL Component Info :
 +---Registers : 
 	               23 Bit    Registers := 2     
 	               13 Bit    Registers := 1     
-	               12 Bit    Registers := 4     
+	               12 Bit    Registers := 5     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 5     
+	                8 Bit    Registers := 4     
 	                7 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 18    
+	                1 Bit    Registers := 20    
 +---Muxes : 
 	   2 Input     23 Bit        Muxes := 3     
 	   4 Input     23 Bit        Muxes := 1     
@@ -283,10 +226,9 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 10    
-	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
 	   6 Input      1 Bit        Muxes := 1     
 	  11 Input      1 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -294,6 +236,11 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module TCD1209D 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 Module TCD1209D_driver 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -310,7 +257,7 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 4     
-	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
 Module AD9945_cfg 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -332,9 +279,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
 Module ccd2axis 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -369,10 +314,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design ccd2axis has unconnected port m_axis_tready
-WARNING: [Synth 8-3331] design TCD1209D_driver has unconnected port f2b
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 841.383 ; gain = 525.520
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -384,13 +327,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 842.410 ; gain = 526.547
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 842.559 ; gain = 526.695
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 801.023 ; gain = 518.359
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -402,7 +345,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 862.480 ; gain = 546.617
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 820.238 ; gain = 537.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -422,11 +365,12 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop shd_reg_reg is being inverted and renamed to shd_reg_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 862.480 ; gain = 546.617
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -439,7 +383,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 862.480 ; gain = 546.617
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -451,7 +395,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 862.480 ; gain = 546.617
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -461,7 +405,6 @@ Static Shift Register Report:
 +--------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name   | RTL Name              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +--------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|AD9945_driver | shd_reg_reg           | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |AD9945_driver | os_tvalid_dly_reg[10] | 11     | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +--------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
@@ -482,48 +425,49 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    35|
-|2     |LUT1   |    31|
-|3     |LUT2   |    39|
-|4     |LUT3   |    37|
-|5     |LUT4   |    52|
-|6     |LUT5   |    30|
-|7     |LUT6   |    50|
-|8     |MUXF7  |     2|
-|9     |SRL16E |     2|
-|10    |FDRE   |   196|
+|1     |BUFG   |     1|
+|2     |CARRY4 |    35|
+|3     |LUT1   |    42|
+|4     |LUT2   |    42|
+|5     |LUT3   |    37|
+|6     |LUT4   |    49|
+|7     |LUT5   |    30|
+|8     |LUT6   |    51|
+|9     |MUXF7  |     2|
+|10    |SRL16E |     1|
+|11    |FDRE   |   208|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+----------------+------+
 |      |Instance            |Module          |Cells |
 +------+--------------------+----------------+------+
-|1     |top                 |                |   474|
-|2     |  TCD1209D_driver_I |TCD1209D_driver |   242|
+|1     |top                 |                |   498|
+|2     |  TCD1209D_driver_I |TCD1209D_driver |   243|
 |3     |  AD9945_cfg_I      |AD9945_cfg      |    86|
-|4     |  AD9945_driver_i   |AD9945_driver   |    41|
-|5     |  ccd2axis_i        |ccd2axis        |   103|
+|4     |  AD9945_driver_i   |AD9945_driver   |    39|
+|5     |  ccd2axis_i        |ccd2axis        |   115|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 862.480 ; gain = 546.617
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 862.480 ; gain = 172.930
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 862.480 ; gain = 546.617
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 820.238 ; gain = 173.219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-76 Infos, 28 Warnings, 21 Critical Warnings and 0 Errors encountered.
+89 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 867.059 ; gain = 564.199
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 823.336 ; gain = 553.621
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/TCD1209D.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TCD1209D_utilization_synth.rpt -pb TCD1209D_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 867.059 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 25 14:50:52 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 823.336 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 27 16:52:29 2020...

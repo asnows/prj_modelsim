@@ -52,6 +52,10 @@ wire TCD1209D_sh,TCD1209D_f1,TCD1209D_f2,TCD1209D_f2b,
 (*mark_debug="true"*)wire				AD9945_tvalid;
 (*mark_debug="true"*)wire data_clk;
 
+(*mark_debug="true"*)reg[D_WIDTH - 1:0] AD9945_tdata_reg ;
+(*mark_debug="true"*)reg				AD9945_tvalid_reg;
+
+
 assign sh = TCD1209D_sh ;
 assign f1 = TCD1209D_f1 ;
 assign f2 = TCD1209D_f2 ;
@@ -109,6 +113,8 @@ AD9945_driver AD9945_driver_i
 
 );
 
+
+
 ccd2axis  
 #(
 	.DATA_WIDTH(D_WIDTH),
@@ -120,8 +126,8 @@ ccd2axis_i
 (
 
 	.pixel_clk    (data_clk		),
-	.tvalid  	  (AD9945_tvalid),
-	.tdata		  (AD9945_tdata	),
+	.tvalid  	  (AD9945_tvalid_reg),
+	.tdata		  (AD9945_tdata_reg),
 	.rows(rows), // ÐÐÊý
 	.m_axis_tdata (m_tdata      ),
 	.m_axis_tlast (m_axis_tlast ),
@@ -130,6 +136,10 @@ ccd2axis_i
 	.m_axis_tready(m_axis_tready)   
 );
 
-
+always@(posedge data_clk)
+begin
+	AD9945_tdata_reg  <= AD9945_tdata;
+    AD9945_tvalid_reg <= AD9945_tvalid;
+end
 
 endmodule
