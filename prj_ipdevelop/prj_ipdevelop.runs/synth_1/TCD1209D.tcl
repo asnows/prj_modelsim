@@ -33,6 +33,7 @@ read_verilog -library xil_defaultlib {
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v
+  E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/genClk.v
   E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

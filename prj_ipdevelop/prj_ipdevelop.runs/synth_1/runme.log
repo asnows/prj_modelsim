@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12112 
+INFO: Helper process launched with PID 15104 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 381.910 ; gain = 99.246
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 382.656 ; gain = 99.496
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'TCD1209D' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
 	Parameter D_WIDTH bound to: 8'b00001100 
@@ -28,7 +28,7 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:12]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:13]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:14]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:17]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:15]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:18]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:19]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:20]
@@ -36,48 +36,47 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:22]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:23]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:24]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:27]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:25]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:28]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:29]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:30]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:31]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:32]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:35]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:33]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:36]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:37]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:38]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:39]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:40]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:41]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:51]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:52]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:53]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:55]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:42]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:56]
-INFO: [Synth 8-6157] synthesizing module 'TCD1209D_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:61]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:62]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:63]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:64]
+INFO: [Synth 8-6157] synthesizing module 'genClk' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/genClk.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'genClk' (2#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/genClk.v:1]
+INFO: [Synth 8-6157] synthesizing module 'TCD1209D_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:18]
 	Parameter STATUS_IDEL bound to: 2'b00 
 	Parameter STATUS_LOAD bound to: 2'b01 
 	Parameter STATUS_TRAN bound to: 2'b10 
 	Parameter STATUS_WAIT bound to: 2'b11 
-	Parameter LINE_WIDTH bound to: 12'b100000101000 
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:159]
-INFO: [Synth 8-6155] done synthesizing module 'TCD1209D_driver' (2#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:26]
+	Parameter LINE_WIDTH bound to: 23'b00000000000100000101000 
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:74]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:80]
+INFO: [Synth 8-4471] merging register 'rs_reg_reg' into 'f2_reg_reg' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:48]
+WARNING: [Synth 8-6014] Unused sequential element rs_reg_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'TCD1209D_driver' (3#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D_driver.v:18]
 INFO: [Synth 8-6157] synthesizing module 'AD9945_cfg' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
 	Parameter STATUS_IDLE bound to: 1'b0 
 	Parameter STATUS_TRANS bound to: 1'b1 
 	Parameter TRANS_NUM bound to: 8'b00110011 
-INFO: [Synth 8-6155] done synthesizing module 'AD9945_cfg' (3#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
-INFO: [Synth 8-6157] synthesizing module 'AD9945_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:23]
-	Parameter STATE_IDLE bound to: 2'b00 
-	Parameter STATE_SAMP bound to: 2'b10 
-	Parameter STATE_OUT bound to: 2'b11 
-	Parameter SAMP_NUM bound to: 12'b100000101000 
-	Parameter RS_LOW_WIDTH bound to: 2 - type: integer 
-	Parameter RS_DLY_NUM bound to: 2 - type: integer 
-	Parameter SHP_DLY_NUM bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AD9945_driver' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AD9945_cfg' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_cfg.v:21]
+INFO: [Synth 8-6157] synthesizing module 'AD9945_driver' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'AD9945_driver' (5#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/AD9945_driver.v:18]
 INFO: [Synth 8-6157] synthesizing module 'ccd2axis' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:12]
 	Parameter DATA_WIDTH bound to: 8'b00001100 
 	Parameter EFFECT_COLS bound to: 12'b100000000000 
@@ -102,13 +101,15 @@ INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:37]
 INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:41]
 INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'ccd2axis' (5#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:12]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TCD1209D_driver_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:69]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_cfg_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:85]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_driver_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:99]
-INFO: [Synth 8-6155] done synthesizing module 'TCD1209D' (6#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ccd2axis' (6#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/ccd2axis.v:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TCD1209D_driver_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:91]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_cfg_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:104]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'genClk_I'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:78]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'AD9945_driver_i'. This will prevent further optimization [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'TCD1209D' (7#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/CCD/TCD1290D/TCD1209D.v:1]
+WARNING: [Synth 8-3331] design TCD1209D_driver has unconnected port extTrigger
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.668 ; gain = 154.004
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.156 ; gain = 153.996
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -121,10 +122,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.668 ; gain = 154.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.156 ; gain = 153.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 436.668 ; gain = 154.004
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 437.156 ; gain = 153.996
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -139,26 +140,26 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 801.023 ; gain = 1.102
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 802.813 ; gain = 1.480
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'status_reg' in module 'TCD1209D_driver'
-INFO: [Synth 8-5546] ROM "rs_clk_reg" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "cp_clk_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sh_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "f2_reg" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "tvalid_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "sh_reg" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "status" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -185,7 +186,7 @@ INFO: [Synth 8-5546] ROM "tlast_reg" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-3354] encoded FSM with state register 'status_reg' using encoding 'sequential' in module 'TCD1209D_driver'
 INFO: [Synth 8-6159] Found Keep on FSM register 'state_reg' in module 'ccd2axis', re-encoding will not be performed
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,25 +199,24 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   2 Input     23 Bit       Adders := 2     
+	   2 Input     25 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
 +---Registers : 
-	               23 Bit    Registers := 2     
+	               25 Bit    Registers := 2     
 	               13 Bit    Registers := 1     
-	               12 Bit    Registers := 5     
-	               11 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
 	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 2     
-	                1 Bit    Registers := 20    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
 +---Muxes : 
-	   2 Input     23 Bit        Muxes := 3     
-	   4 Input     23 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 3     
+	   4 Input     25 Bit        Muxes := 1     
 	   2 Input     13 Bit        Muxes := 3     
 	   4 Input     13 Bit        Muxes := 1     
 	   4 Input     12 Bit        Muxes := 1     
@@ -224,11 +224,11 @@ Detailed RTL Component Info :
 	  11 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 3     
+	   6 Input      1 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 10    
-	   3 Input      1 Bit        Muxes := 3     
-	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
 	  11 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -241,23 +241,28 @@ Detailed RTL Component Info :
 +---Registers : 
 	               12 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
+Module genClk 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   6 Input      1 Bit        Muxes := 5     
 Module TCD1209D_driver 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 2     
-	   2 Input     23 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 1     
 +---Registers : 
-	               23 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	               25 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
 +---Muxes : 
-	   2 Input     23 Bit        Muxes := 3     
-	   4 Input     23 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 3     
+	   4 Input     25 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 4     
-	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 5     
 Module AD9945_cfg 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -277,9 +282,8 @@ Detailed RTL Component Info :
 Module AD9945_driver 
 Detailed RTL Component Info : 
 +---Registers : 
-	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 Module ccd2axis 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -314,8 +318,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design TCD1209D_driver has unconnected port extTrigger
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -327,13 +332,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 801.023 ; gain = 518.359
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 802.813 ; gain = 519.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -345,7 +350,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 820.238 ; gain = 537.574
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 822.438 ; gain = 539.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -365,12 +370,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop shd_reg_reg is being inverted and renamed to shd_reg_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 822.438 ; gain = 539.277
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -383,7 +387,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 822.438 ; gain = 539.277
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -395,7 +399,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 822.438 ; gain = 539.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -405,7 +409,7 @@ Static Shift Register Report:
 +--------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name   | RTL Name              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +--------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|AD9945_driver | os_tvalid_dly_reg[10] | 11     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|AD9945_driver | os_tvalid_dly_reg[11] | 12     | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +--------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -426,36 +430,37 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    35|
-|3     |LUT1   |    42|
-|4     |LUT2   |    42|
-|5     |LUT3   |    37|
-|6     |LUT4   |    49|
-|7     |LUT5   |    30|
-|8     |LUT6   |    51|
+|2     |CARRY4 |    21|
+|3     |LUT1   |    21|
+|4     |LUT2   |    19|
+|5     |LUT3   |    12|
+|6     |LUT4   |    41|
+|7     |LUT5   |    26|
+|8     |LUT6   |    37|
 |9     |MUXF7  |     2|
 |10    |SRL16E |     1|
-|11    |FDRE   |   208|
+|11    |FDRE   |   206|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+----------------+------+
 |      |Instance            |Module          |Cells |
 +------+--------------------+----------------+------+
-|1     |top                 |                |   498|
-|2     |  TCD1209D_driver_I |TCD1209D_driver |   243|
-|3     |  AD9945_cfg_I      |AD9945_cfg      |    86|
-|4     |  AD9945_driver_i   |AD9945_driver   |    39|
-|5     |  ccd2axis_i        |ccd2axis        |   115|
+|1     |top                 |                |   387|
+|2     |  genClk_I          |genClk          |    17|
+|3     |  TCD1209D_driver_I |TCD1209D_driver |   117|
+|4     |  AD9945_cfg_I      |AD9945_cfg      |    86|
+|5     |  AD9945_driver_i   |AD9945_driver   |    34|
+|6     |  ccd2axis_i        |ccd2axis        |   115|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 822.438 ; gain = 539.277
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 820.238 ; gain = 173.219
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 820.238 ; gain = 537.574
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 822.438 ; gain = 173.621
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 822.438 ; gain = 539.277
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 37 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -463,11 +468,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-89 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+94 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 823.336 ; gain = 553.621
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 826.219 ; gain = 555.883
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/TCD1209D.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TCD1209D_utilization_synth.rpt -pb TCD1209D_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 823.336 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 27 16:52:29 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 826.219 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 15:30:59 2020...
