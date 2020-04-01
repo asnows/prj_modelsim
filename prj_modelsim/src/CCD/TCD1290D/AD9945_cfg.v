@@ -32,7 +32,7 @@ output 		SL
 
 );
 localparam STATUS_IDLE = 1'b0,STATUS_TRANS = 1'b1;
-localparam TRANS_NUM = 8'd51;
+localparam TRANS_NUM = 8'd63;
 
 reg 	status = STATUS_IDLE;
 
@@ -41,7 +41,7 @@ reg[6:0] Ctrl_dly	 ;
 reg[7:0] Clamp_dly	 ;
 reg[9:0] VGA_Gain_dly;
 reg 	 cfg_en_dly	 ;
-
+reg[11:0] Startup = 12'h838;
 
 reg[7:0] data_cnt = 8'd0;
 
@@ -161,7 +161,14 @@ begin
 				sdata_reg <= 1'b0;
 			end
 			
-			8'd51:
+			//Startup
+			
+			8'd51,8'd52,8'd53,8'd54,8'd55,8'd56,8'd57,8'd58,8'd59,8'd60,8'd61,8'd62:
+			begin
+				sdata_reg <= Startup[data_cnt - 8'd51];
+			end
+
+			8'd63:
 			begin
 				sdata_reg <= 1'b1;
 				sl_reg    <= 1'b1;
