@@ -8,6 +8,7 @@ input sys_clk,
 (*mark_debug="true"*)input  triggerMode, //1 = 外部触发，0=内部触发
 (*mark_debug="true"*)input  extTrigger, 
 (*mark_debug="true"*)input[24:0]f_cnt,
+(*mark_debug="true"*)input[7:0] f2_freq,// f2 频率设置
 (*mark_debug="true"*)output sh,
 (*mark_debug="true"*)output f1,
 (*mark_debug="true"*)output f2,
@@ -53,6 +54,9 @@ wire sh_puls;
 wire f2_puls;
 wire rs_puls;
 wire cp_puls;
+
+
+
 (*mark_debug="true"*)wire os_tvalid;
 
 
@@ -65,10 +69,10 @@ wire[D_WIDTH - 1:0] m_tdata;
 
 
 assign sh = sh_puls;
-assign f1 = ~(f2_puls & f2_clk);
-assign f2 =  f2_puls & f2_clk;
-assign rs =  rs_puls & rs_clk;
-assign cp =  rs_puls & cp_clk;
+assign f1 =  ~(f2_puls & f2_clk);
+assign f2 =  f2_puls & f2_clk	;
+assign rs =  rs_puls & rs_clk	;
+assign cp =  rs_puls & cp_clk	;
 
 assign DATACLK = pxl_clk;
 assign m_axis_tdata = m_tdata[11:4];
@@ -78,6 +82,7 @@ assign m_axis_aclk = pxl_clk;
 genClk genClk_I
 (
 	.sys_clk(sys_clk),
+	.f2_freq(f2_freq),
 	.f2 (f2_clk),
 	.rs (rs_clk),
 	.cp (cp_clk),

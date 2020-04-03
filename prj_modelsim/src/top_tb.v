@@ -187,6 +187,7 @@ TCD1209D_i
 .triggerMode(1'b0), //1 = 外部触发，0=内部触发
 .extTrigger(1'b0), 
 .f_cnt(2102),
+.f2_freq(100),
 .sh(sh),
 .f1(f1),
 .f2(),
