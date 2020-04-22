@@ -130,12 +130,12 @@ module top_tb
 // );
 
 
-// tb_imgProcess tb_img_I
-// (
-	// .clk(clk_100m),
-	// .resetn(resetn)
+tb_imgProcess tb_img_I
+(
+	.clk(clk_100m),
+	.resetn(resetn)
 
-// );
+);
 
 wire sh,f1;
 reg sh_dly,f1_dly;
@@ -175,7 +175,7 @@ wire           m_axis_tready;
 wire           m_axis_aclk  ;
 
 
-
+/*
 TCD1209D
 #(
 	.D_WIDTH(12)
@@ -224,26 +224,37 @@ TCD1209D_i
 );
 
 
-  rows_resize
-    #(
-        .DATA_WIDTH(8)
-    )
-	rows_resize_I
-    (
-		
-        .pixel_clk(m_axis_aclk)       ,
-		.rows_size   	(3840),
-        .s_axis_tdata    (m_axis_tdata ),
-        .s_axis_tlast    (m_axis_tlast ),
-        .s_axis_tuser    (m_axis_tuser ),
-        .s_axis_tvalid   (m_axis_tvalid),
-        
-        .m_axis_tlast   (),
-        .m_axis_tuser   (),
-        .m_axis_tvalid  (),
-        .m_axis_tdata   ()
-    
-     );
+rows_resize
+#(
+	.DATA_WIDTH(8)
+)
+rows_resize_I
+(
+	
+	.pixel_clk(m_axis_aclk)       ,
+	.rows_size   	(3840),
+	.s_axis_tdata    (m_axis_tdata ),
+	.s_axis_tlast    (m_axis_tlast ),
+	.s_axis_tuser    (m_axis_tuser ),
+	.s_axis_tvalid   (m_axis_tvalid),
+	
+	.m_axis_tlast   (),
+	.m_axis_tuser   (),
+	.m_axis_tvalid  (),
+	.m_axis_tdata   ()
 
+ );
+
+FrmCmp_Irq FrmCmp_Irq_i
+(
+	.s_axis_aclk(m_axis_aclk)      ,
+	.s_axis_tlast(m_axis_tlast )    ,
+	.s_axis_tuser (m_axis_tuser )   ,
+	.img_vsize	(12'd15),
+	.FrmCmp_Irq   ()
+		
+);
+
+*/
 
 endmodule

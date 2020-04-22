@@ -1,0 +1,420 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Apr 20 07:56:57 2020
+# Process ID: 6264
+# Current directory: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1
+# Command line: vivado.exe -log isp_rgb_model.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source isp_rgb_model.tcl
+# Log file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/isp_rgb_model.vds
+# Journal file: E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+CRITICAL WARNING: [Common 17-1240] XILINX_TCLAPP_REPO is pointed to a location 'D:\Xilinx\Vivado\2018.1\data\XilinxTclStore' which does not exist or could not be read. The XilinxTclStore has been reverted to the installation area.
+source isp_rgb_model.tcl -notrace
+Command: synth_design -top isp_rgb_model -part xc7z020clg400-1 -flatten_hierarchy full -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9496 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 414.129 ; gain = 95.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'isp_rgb_model' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/isp_rgb_model.v:12]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter RGB_WIDTH bound to: 24 - type: integer 
+	Parameter IMG_WIDTH bound to: 2560 - type: integer 
+	Parameter IMG_HEIGHT bound to: 1440 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'maxtri3x3_shift' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/imports/ISP/maxtri3x3_shift.v:24]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter IMG_HEIGHT bound to: 1440 - type: integer 
+	Parameter HL bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_maxtrix' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/.Xil/Vivado-6264-VT2OB6D7ZB52FZ0/realtime/fifo_maxtrix_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_maxtrix' (1#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/.Xil/Vivado-6264-VT2OB6D7ZB52FZ0/realtime/fifo_maxtrix_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_tlast_dly3_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/imports/ISP/maxtri3x3_shift.v:115]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_tuser_dly3_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/imports/ISP/maxtri3x3_shift.v:116]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_tvalid_dly3_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/imports/ISP/maxtri3x3_shift.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'maxtri3x3_shift' (2#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/imports/ISP/maxtri3x3_shift.v:24]
+INFO: [Synth 8-6157] synthesizing module 'bayer2rgb' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:23]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter RGB_WIDTH bound to: 24 - type: integer 
+	Parameter IMG_WIDTH bound to: 2560 - type: integer 
+	Parameter IMG_HEIGHT bound to: 1440 - type: integer 
+	Parameter BGGR bound to: 2'b00 
+	Parameter GBRG bound to: 2'b01 
+	Parameter GRBG bound to: 2'b10 
+	Parameter RGGB bound to: 2'b11 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:31]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:32]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:33]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:34]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:35]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:36]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:37]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:38]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:40]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:41]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:42]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:43]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:204]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:252]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:255]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:272]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:252]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:255]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:272]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:252]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:255]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:272]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:252]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:255]
+INFO: [Synth 8-226] default block is never used [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:272]
+WARNING: [Synth 8-3936] Found unconnected internal register 'data11_reg' and it is trimmed from '10' to '8' bits. [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'bayer2rgb' (3#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:23]
+WARNING: [Synth 8-6014] Unused sequential element debug_cmd_dely_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/isp_rgb_model.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'isp_rgb_model' (4#1) [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/isp_rgb_model.v:12]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[3]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[2]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[1]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 469.484 ; gain = 150.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 469.484 ; gain = 150.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 469.484 ; gain = 150.895
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix/fifo_maxtrix_in_context.xdc] for cell 'maxtri3x3_bayer2rgb/line_buff_1'
+Finished Parsing XDC File [e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix/fifo_maxtrix_in_context.xdc] for cell 'maxtri3x3_bayer2rgb/line_buff_1'
+Parsing XDC File [e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix/fifo_maxtrix_in_context.xdc] for cell 'maxtri3x3_bayer2rgb/line_buff_2'
+Finished Parsing XDC File [e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix/fifo_maxtrix_in_context.xdc] for cell 'maxtri3x3_bayer2rgb/line_buff_2'
+Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/constrs_1/new/top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 833.633 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 833.633 ; gain = 515.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 833.633 ; gain = 515.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for maxtri3x3_bayer2rgb/line_buff_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for maxtri3x3_bayer2rgb/line_buff_2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 833.633 ; gain = 515.043
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "line_count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "line_buff_1_rd" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "line_buff_1_rd" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 833.633 ; gain = 515.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input     10 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 2     
+	               10 Bit    Registers := 8     
+	                8 Bit    Registers := 35    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 45    
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 9     
+	   3 Input      8 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module isp_rgb_model 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module maxtri3x3_shift 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+Module bayer2rgb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input     10 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               10 Bit    Registers := 8     
+	                8 Bit    Registers := 31    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 9     
+	   3 Input      8 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 's_axis_tvalid_dly5_reg' into 'tvalid_reg' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:92]
+INFO: [Synth 8-4471] merging register 'matrix_data11_dly2_reg[7:0]' into 'matrix0_data12_reg[7:0]' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:96]
+INFO: [Synth 8-4471] merging register 'matrix_data11_dly3_reg[7:0]' into 'matrix0_data11_reg[7:0]' [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:96]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_tvalid_dly5_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:92]
+WARNING: [Synth 8-6014] Unused sequential element matrix_data11_dly2_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:96]
+WARNING: [Synth 8-6014] Unused sequential element matrix_data11_dly3_reg was removed.  [E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v:96]
+INFO: [Synth 8-5546] ROM "maxtri3x3_bayer2rgb/line_buff_1_rd" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[3]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[2]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[1]
+WARNING: [Synth 8-3331] design isp_rgb_model has unconnected port debug_cmd[0]
+INFO: [Synth 8-3886] merging instance 'maxtri3x3_bayer2rgb/tvalid_reg_reg[0]' (FD) to 'maxtri3x3_bayer2rgb/s_axis_tvalid_dly1_reg'
+INFO: [Synth 8-3886] merging instance 'maxtri3x3_bayer2rgb/tvalid_reg_reg[1]' (FD) to 'maxtri3x3_bayer2rgb/s_axis_tvalid_dly2_reg'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[0]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[1]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[2]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[3]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[4]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[5]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[6]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/matrix0_data10_reg[7]' (FD) to 'U_bayer2rgb/matrix1_data11_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data12_reg[9]' (FDR) to 'U_bayer2rgb/data12_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data21_reg[9]' (FDR) to 'U_bayer2rgb/data12_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data10_reg[9]' (FDR) to 'U_bayer2rgb/data12_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data01_reg[9]' (FDR) to 'U_bayer2rgb/data12_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data10_reg[8]' (FDR) to 'U_bayer2rgb/data12_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data12_reg[8]' (FDR) to 'U_bayer2rgb/data21_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data01_reg[8]' (FDR) to 'U_bayer2rgb/data21_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data21_reg[8]' (FDR) to 'U_bayer2rgb/data02_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data00_reg[8]' (FDR) to 'U_bayer2rgb/data02_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data22_reg[8]' (FDR) to 'U_bayer2rgb/data02_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data02_reg[8]' (FDR) to 'U_bayer2rgb/data02_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data20_reg[8]' (FDR) to 'U_bayer2rgb/data02_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data22_reg[9]' (FDR) to 'U_bayer2rgb/data02_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data20_reg[9]' (FDR) to 'U_bayer2rgb/data02_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U_bayer2rgb/data02_reg[9]' (FDR) to 'U_bayer2rgb/data00_reg[9]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_bayer2rgb/\data00_reg[9] )
+WARNING: [Synth 8-3332] Sequential element (data00_reg[9]) is unused and will be removed from module bayer2rgb.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 833.633 ; gain = 515.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 836.570 ; gain = 517.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 837.016 ; gain = 518.426
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 849.117 ; gain = 530.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 849.117 ; gain = 530.527
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 849.117 ; gain = 530.527
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 849.117 ; gain = 530.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|bayer2rgb   | s_axis_tlast_dly3_reg  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bayer2rgb   | s_axis_tlast_dly7_reg  | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bayer2rgb   | s_axis_tuser_dly7_reg  | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bayer2rgb   | s_axis_tvalid_dly3_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|bayer2rgb   | data21_reg[7]          | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|bayer2rgb   | data01_reg[7]          | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |fifo_maxtrix  |         2|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |fifo_maxtrix    |     1|
+|2     |fifo_maxtrix__1 |     1|
+|3     |CARRY4          |    21|
+|4     |LUT1            |     4|
+|5     |LUT2            |    24|
+|6     |LUT3            |    86|
+|7     |LUT4            |    80|
+|8     |LUT5            |    21|
+|9     |LUT6            |    16|
+|10    |SRL16E          |    20|
+|11    |FDRE            |   405|
+|12    |FDSE            |     1|
++------+----------------+------+
+
+Report Instance Areas: 
++------+--------------+----------+------+
+|      |Instance      |Module    |Cells |
++------+--------------+----------+------+
+|1     |top           |          |   704|
+|2     |  U_bayer2rgb |bayer2rgb |   574|
++------+--------------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 849.117 ; gain = 530.527
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 849.117 ; gain = 166.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 849.117 ; gain = 530.527
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+77 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 858.227 ; gain = 549.824
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.runs/synth_1/isp_rgb_model.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file isp_rgb_model_utilization_synth.rpt -pb isp_rgb_model_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 858.227 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 20 07:57:37 2020...

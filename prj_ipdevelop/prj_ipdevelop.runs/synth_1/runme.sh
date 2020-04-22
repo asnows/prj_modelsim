@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log TCD1209D.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TCD1209D.tcl
+EAStep vivado -log isp_rgb_model.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source isp_rgb_model.tcl

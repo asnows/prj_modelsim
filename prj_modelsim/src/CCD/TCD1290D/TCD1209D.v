@@ -55,6 +55,11 @@ wire f2_puls;
 wire rs_puls;
 wire cp_puls;
 
+wire clpob_puls;
+wire pblk_puls;
+
+reg f2_tmp;
+
 
 
 (*mark_debug="true"*)wire os_tvalid;
@@ -75,8 +80,37 @@ assign rs =  rs_puls & rs_clk	;
 assign cp =  rs_puls & cp_clk	;
 
 assign DATACLK = pxl_clk;
+assign CLPOB = f2_clk;//clpob_puls;
+assign PBLK  = sys_clk;//pblk_puls;
+
+
+
 assign m_axis_tdata = m_tdata[11:4];
 assign m_axis_aclk = pxl_clk;
+
+
+   // ODDR #(
+      // .DDR_CLK_EDGE("SAME_EDGE"), // "OPPOSITE_EDGE" or "SAME_EDGE" 
+      // .INIT(1'b0),    // Initial value of Q: 1'b0 or 1'b1
+      // .SRTYPE("SYNC") // Set/Reset type: "SYNC" or "ASYNC" 
+   // ) ODDR_inst (
+      // .Q(f1),   // 1-bit DDR output
+      // .C(~f2_tmp),   // 1-bit clock input
+      // .CE(1'b1), // 1-bit clock enable input
+      // .D1(1'b1), // 1-bit data input (positive edge)
+      // .D2(1'b0), // 1-bit data input (negative edge)
+      // .R(1'b0),   // 1-bit reset
+      // .S(1'b0)    // 1-bit set
+   // );
+
+
+
+always@(posedge sys_clk )
+begin
+	f2_tmp <= f2_clk;
+end
+
+
 
 
 genClk genClk_I
@@ -124,8 +158,8 @@ AD9945_driver AD9945_driver_i
 (
 	.pxl_clk(pxl_clk),
 	.os_tvalid	(os_tvalid),
-	.CLPOB	(CLPOB)	,
-	.PBLK	(PBLK)	,
+	.CLPOB	(clpob_puls)	,
+	.PBLK	(pblk_puls)	,
 	.DATA_IN(DATA_IN),
 	.tdata	(AD9945_tdata),
 	.tvalid	(AD9945_tvalid)

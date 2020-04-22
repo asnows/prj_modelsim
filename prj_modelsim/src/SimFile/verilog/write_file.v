@@ -72,6 +72,14 @@ module write_file
                     $fwrite(data_wr0,"%c",data_in[7:0]); 
                     $fwrite(data_wr0,"%c",data_in[15:8]);               
                 end
+				
+				8'd24:
+                begin
+                    $fwrite(data_wr0,"%c",data_in[7:0]); 
+                    $fwrite(data_wr0,"%c",data_in[15:8]); 
+					$fwrite(data_wr0,"%c",data_in[23:16]);					
+                end
+
                 
                 8'd32:
                 begin
