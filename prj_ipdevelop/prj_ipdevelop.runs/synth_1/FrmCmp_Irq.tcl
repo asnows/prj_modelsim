@@ -22,23 +22,13 @@ create_project -in_memory -part xc7z020clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.cache/wt [current_project]
 set_property parent.project_path E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib {
-  E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v
-  E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/imports/ISP/maxtri3x3_shift.v
-  E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/ISP_RGB_Model/isp_rgb_model.v
-}
-read_ip -quiet E:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix.xci
-set_property used_in_implementation false [get_files -all e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix.xdc]
-set_property used_in_implementation false [get_files -all e:/WorkSpace/project/FPGA/prj_modelsim/prj_ipdevelop/prj_ipdevelop.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix_ooc.xdc]
-
+read_verilog -library xil_defaultlib E:/WorkSpace/project/FPGA/prj_modelsim/prj_modelsim/src/IMG/FrmCmp_Irq.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -53,12 +43,12 @@ set_property used_in_implementation false [get_files E:/WorkSpace/project/FPGA/p
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top isp_rgb_model -part xc7z020clg400-1 -flatten_hierarchy full -mode out_of_context
+synth_design -top FrmCmp_Irq -part xc7z020clg400-1 -flatten_hierarchy full -mode out_of_context
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef isp_rgb_model.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file isp_rgb_model_utilization_synth.rpt -pb isp_rgb_model_utilization_synth.pb"
+write_checkpoint -force -noxdef FrmCmp_Irq.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file FrmCmp_Irq_utilization_synth.rpt -pb FrmCmp_Irq_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1587340614">
-  <File Type="PA-TCL" Name="isp_rgb_model.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="isp_rgb_model_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="isp_rgb_model_reports.tcl"/>
-  <File Type="RDS-RDS" Name="isp_rgb_model.vds"/>
-  <File Type="RDS-UTIL" Name="isp_rgb_model_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="isp_rgb_model_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="isp_rgb_model.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="isp_rgb_model_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="isp_rgb_model_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590105037">
+  <File Type="PA-TCL" Name="FrmCmp_Irq.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="FrmCmp_Irq_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="FrmCmp_Irq_reports.tcl"/>
+  <File Type="RDS-RDS" Name="FrmCmp_Irq.vds"/>
+  <File Type="RDS-UTIL" Name="FrmCmp_Irq_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FrmCmp_Irq_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="FrmCmp_Irq.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="FrmCmp_Irq_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="FrmCmp_Irq_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../prj_modelsim/src/IMG/FrmCmp_Irq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,6 +28,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/ISP/maxtri3x3_shift.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../prj_modelsim/src/ISP/maxtri3x3_shift.v"/>
         <Attr Name="ImportTime" Val="1577345533"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -29,6 +38,7 @@
     </File>
     <File Path="$PPRDIR/../prj_modelsim/src/IMG/ISP_RGB_Model/isp_rgb_model.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -201,14 +211,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../prj_modelsim/src/IMG/FrmCmp_Irq.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../prj_modelsim/src/IMG/rows_resize.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -219,7 +221,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="isp_rgb_model"/>
+      <Option Name="TopModule" Val="FrmCmp_Irq"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -240,9 +242,8 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design">
-      <Option Id="FlattenHierarchy">0</Option>
       <Option Id="MoreOptsStr"><![CDATA[-mode out_of_context]]></Option>
+      <Option Id="FlattenHierarchy">0</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_maxtrix"/>
 </GenRun>

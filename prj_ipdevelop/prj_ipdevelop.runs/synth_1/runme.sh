@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log isp_rgb_model.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source isp_rgb_model.tcl
+EAStep vivado -log FrmCmp_Irq.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FrmCmp_Irq.tcl

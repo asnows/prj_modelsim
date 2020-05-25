@@ -56,8 +56,16 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../prj_modelsim/src/IMG/FrmCmp_Irq.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../prj_modelsim/src/IMG/ISP_RGB_Model/bayer2rgb.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -65,6 +73,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/ISP/maxtri3x3_shift.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../prj_modelsim/src/ISP/maxtri3x3_shift.v"/>
           <Attr Name="ImportTime" Val="1577345533"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,6 +83,7 @@
       </File>
       <File Path="$PPRDIR/../prj_modelsim/src/IMG/ISP_RGB_Model/isp_rgb_model.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -246,14 +256,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../prj_modelsim/src/IMG/FrmCmp_Irq.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../prj_modelsim/src/IMG/rows_resize.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -264,7 +266,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="isp_rgb_model"/>
+        <Option Name="TopModule" Val="FrmCmp_Irq"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -310,6 +312,7 @@
     <FileSet Name="fifo_maxtrix" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_maxtrix">
       <File Path="$PSRCDIR/sources_1/ip/fifo_maxtrix/fifo_maxtrix.xci">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

@@ -1,13 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Apr 20 07:57:37 2020
+| Date         : Fri May 22 07:51:16 2020
 | Host         : VT2OB6D7ZB52FZ0 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file isp_rgb_model_utilization_synth.rpt -pb isp_rgb_model_utilization_synth.pb
-| Design       : isp_rgb_model
+| Command      : report_utilization -file FrmCmp_Irq_utilization_synth.rpt -pb FrmCmp_Irq_utilization_synth.pb
+| Design       : FrmCmp_Irq
 | Device       : 7z020clg400-1
 | Design State : Synthesized
----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -27,20 +27,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  175 |     0 |     53200 |  0.33 |
-|   LUT as Logic             |  155 |     0 |     53200 |  0.29 |
-|   LUT as Memory            |   20 |     0 |     17400 |  0.11 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |   20 |     0 |           |       |
-| Slice Registers            |  406 |     0 |    106400 |  0.38 |
-|   Register as Flip Flop    |  406 |     0 |    106400 |  0.38 |
-|   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
-| F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
-+----------------------------+------+-------+-----------+-------+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             |   13 |     0 |     53200 |  0.02 |
+|   LUT as Logic          |   13 |     0 |     53200 |  0.02 |
+|   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
+| Slice Registers         |   14 |     0 |    106400 |  0.01 |
+|   Register as Flip Flop |   14 |     0 |    106400 |  0.01 |
+|   Register as Latch     |    0 |     0 |    106400 |  0.00 |
+| F7 Muxes                |    0 |     0 |     26600 |  0.00 |
+| F8 Muxes                |    0 |     0 |     13300 |  0.00 |
++-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -58,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 1     |          Yes |         Set |            - |
-| 405   |          Yes |       Reset |            - |
+| 0     |          Yes |         Set |            - |
+| 14    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,27 +146,22 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  405 |        Flop & Latch |
-| LUT3     |   86 |                 LUT |
-| LUT4     |   80 |                 LUT |
-| LUT2     |   24 |                 LUT |
-| LUT5     |   21 |                 LUT |
-| CARRY4   |   21 |          CarryLogic |
-| SRL16E   |   20 |  Distributed Memory |
-| LUT6     |   16 |                 LUT |
-| LUT1     |    4 |                 LUT |
-| FDSE     |    1 |        Flop & Latch |
+| FDRE     |   14 |        Flop & Latch |
+| LUT4     |   12 |                 LUT |
+| CARRY4   |    6 |          CarryLogic |
+| LUT6     |    4 |                 LUT |
+| LUT3     |    1 |                 LUT |
+| LUT2     |    1 |                 LUT |
+| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+--------------+------+
-|   Ref Name   | Used |
-+--------------+------+
-| fifo_maxtrix |    2 |
-+--------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 
 9. Instantiated Netlists
